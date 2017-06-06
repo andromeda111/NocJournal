@@ -1,23 +1,10 @@
 angular.module('app.controllers', [])
 
-// .controller('homeCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// // You can include any angular dependencies as parameters for this function
-// // TIP: Access Route Parameters for your page via $stateParams.parameterName
-// function ($scope, $stateParams) {
-//
-//
-// }])
-.controller('userCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
+// The following are the constructor functions for each page's controller. See https://docs.angularjs.org/guide/controller
+// You can include any angular dependencies as parameters for these functions
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
-
-}])
-
-.controller('showDreamCtrl', ['$scope', '$stateParams', '$http', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
+.controller('allDreamsCtrl', ['$scope', '$stateParams', '$http',
 function ($scope, $stateParams, $http) {
 
     const apiUrl = 'https://dream-frog.herokuapp.com'
@@ -53,41 +40,18 @@ function ($scope, $stateParams, $http) {
 
 }])
 
-// .controller('cloudCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// // You can include any angular dependencies as parameters for this function
-// // TIP: Access Route Parameters for your page via $stateParams.parameterName
-// function ($scope, $stateParams) {
-//
-//
-// }])
-
-.controller('calendarCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
+.controller('showDreamCtrl', ['$scope', '$stateParams',
 function ($scope, $stateParams) {
-
 
 }])
 
-.controller('symbolSearchCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
+.controller('newFormCtrl', ['$scope', '$stateParams',
+function ($scope, $stateParams) {
 
 }])
 
-.controller('lucidResourceCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-
-
-}])
-
-.controller('menuCtrl', ['$scope', '$stateParams', '$ionicUser', '$ionicAuth', '$state', '$ionicSideMenuDelegate', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
+.controller('menuCtrl', ['$scope', '$stateParams', '$ionicUser', '$ionicAuth', '$state', '$ionicSideMenuDelegate',
 function ($scope, $stateParams, $ionicUser, $ionicAuth, $state, $ionicSideMenuDelegate) {
 
   	// Updated on 1/9/2017 to fix issues with logging
@@ -101,7 +65,7 @@ function ($scope, $stateParams, $ionicUser, $ionicAuth, $state, $ionicSideMenuDe
             	console.log('logged in')
             });
         }else{
-        	$scope.userData = {};
+        	$scope.userData = {}
         }
     }
 
@@ -120,9 +84,14 @@ function ($scope, $stateParams, $ionicUser, $ionicAuth, $state, $ionicSideMenuDe
 
 }])
 
-.controller('loginCtrl', ['$scope', '$stateParams', '$ionicUser', '$ionicAuth', '$state', '$ionicHistory', '$rootScope', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
+////////////////////RESOURCES AND USER STUFF BELOW ///////////////////////////////////////
+
+.controller('userCtrl', ['$scope', '$stateParams',
+function ($scope, $stateParams) {
+
+}])
+
+.controller('loginCtrl', ['$scope', '$stateParams', '$ionicUser', '$ionicAuth', '$state', '$ionicHistory', '$rootScope',
 function ($scope, $stateParams, $ionicUser, $ionicAuth, $state, $ionicHistory, $rootScope) {
 
     $scope.data = {
@@ -157,9 +126,7 @@ function ($scope, $stateParams, $ionicUser, $ionicAuth, $state, $ionicHistory, $
 
 }])
 
-.controller('signupCtrl', ['$scope', '$stateParams', '$ionicAuth', '$ionicUser', '$state', '$ionicHistory', '$rootScope', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
+.controller('signupCtrl', ['$scope', '$stateParams', '$ionicAuth', '$ionicUser', '$state', '$ionicHistory', '$rootScope',
 function ($scope, $stateParams, $ionicAuth, $ionicUser, $state, $ionicHistory, $rootScope) {
 
     $scope.data = {
@@ -200,5 +167,20 @@ function ($scope, $stateParams, $ionicAuth, $ionicUser, $state, $ionicHistory, $
             $scope.error = error_lookup[err.details[0]];
         });
     }
+
+}])
+
+.controller('calendarCtrl', ['$scope', '$stateParams',
+function ($scope, $stateParams) {
+
+}])
+
+.controller('symbolismCtrl', ['$scope', '$stateParams',
+function ($scope, $stateParams) {
+
+}])
+
+.controller('lucidCtrl', ['$scope', '$stateParams',
+function ($scope, $stateParams) {
 
 }])

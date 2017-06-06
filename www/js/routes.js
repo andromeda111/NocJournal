@@ -7,15 +7,41 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  //     .state('menu.home', {
-  //   url: '/page1',
-  //   views: {
-  //     'side-menu21': {
-  //       templateUrl: 'templates/home.html',
-  //       controller: 'homeCtrl'
-  //     }
-  //   }
-  // })
+      .state('menu.allDreams', {
+    url: '/all-dreams',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/all-dreams.html',
+        controller: 'allDreamsCtrl'
+      }
+    }
+  })
+
+  .state('menu.showDream', {
+    url: '/show',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/show-dream.html',
+        controller: 'showDreamCtrl'
+      }
+    }
+  })
+
+  .state('menu.newForm', {
+    url: '/new',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/new-form.html',
+        controller: 'newFormCtrl'
+      }
+    }
+  })
+
+  .state('menu', {
+    url: '/side-menu21',
+    templateUrl: 'templates/menu.html',
+    controller: 'menuCtrl'
+  })
 
   .state('menu.user', {
     url: '/user',
@@ -27,74 +53,49 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.showDream', {
-    url: '/page2',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/showDream.html',
-        controller: 'showDreamCtrl'
-      }
-    }
-  })
-
-  // .state('menu.cloud', {
-  //   url: '/page3',
-  //   views: {
-  //     'side-menu21': {
-  //       templateUrl: 'templates/cloud.html',
-  //       controller: 'cloudCtrl'
-  //     }
-  //   }
-  // })
-
-  .state('menu.calendar', {
-    url: '/calendar',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/calendar.html',
-        controller: 'calendarCtrl'
-      }
-    }
-  })
-
-  .state('menu.symbolSearch', {
-    url: '/symbolSearch',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/symbolSearch.html',
-        controller: 'symbolSearchCtrl'
-      }
-    }
-  })
-
-  .state('menu.lucidResource', {
-    url: '/lucidResource',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/lucidResource.html',
-        controller: 'lucidResourceCtrl'
-      }
-    }
-  })
-
-  .state('menu', {
-    url: '/side-menu21',
-    templateUrl: 'templates/menu.html',
-    controller: 'menuCtrl'
-  })
-
   .state('login', {
-    url: '/page4',
+    url: '/login',
     templateUrl: 'templates/login.html',
     controller: 'loginCtrl'
   })
 
   .state('signup', {
-    url: '/page5',
+    url: '/signup',
     templateUrl: 'templates/signup.html',
     controller: 'signupCtrl'
   })
 
-$urlRouterProvider.otherwise('/side-menu21')
+
+    .state('menu.calendar', {
+      url: '/calendar',
+      views: {
+        'side-menu21': {
+          templateUrl: 'templates/calendar.html',
+          controller: 'calendarCtrl'
+        }
+      }
+    })
+
+  .state('menu.symbol', {
+    url: '/symbolism',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/symbolism.html',
+        controller: 'symbolismCtrl'
+      }
+    }
+  })
+
+  .state('menu.lucid', {
+    url: '/lucid',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/lucid.html',
+        controller: 'lucidCtrl'
+      }
+    }
+  })
+
+$urlRouterProvider.otherwise('/side-menu21/login')
 
 })
