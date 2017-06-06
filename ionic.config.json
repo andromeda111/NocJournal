@@ -1,6 +1,9 @@
 {
   "name": "AuthTest",
-  "app_id": "",
+  "app_id": "a617a746",
   "type": "ionic1",
-  "gulpStartupTasks": ["sass", "watch"]
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ]
 }
