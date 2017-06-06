@@ -1,38 +1,25 @@
 angular.module('app.allDreams', [])
 
+  .controller('allDreamsCtrl', ['$scope', '$stateParams', '$ionicUser', '$http',
+    function ($scope, $stateParams, $ionicUser, $http) {
+      const apiUrl = 'https://dream-frog.herokuapp.com'
+      $scope.userDreamsAll = []
 
-.controller('allDreamsCtrl', ['$scope', '$stateParams', '$http',
-function ($scope, $stateParams, $http) {
+      getUserDreams()
 
-    const apiUrl = 'https://dream-frog.herokuapp.com'
-    $scope.dreamsArr = []
-
-  $scope.getUserDreams = function () {
-
-    console.log('Get Stuff Button Works!');
-
-    $http.get(apiUrl).then(result => {
-      console.log(result);
-
-      let userDreams = []
-      result.data.forEach(el => {
-          console.log(el)
-          if (el['id'] === 2) {
-              userDreams.push(el)
-          }
-      })
-
-    //   let userDreams = result.data.filter(function () {
-    //       return username === $scope.userData.username
-    //   })
-      console.log(userDreams)
-      $scope.dreamsArr = userDreams
-    })
-  }
-
-//   $scope.deleteDreams= function () {
-//     let del = $scope.dreamsArr.length - 1
-//     $http.delete(apiUrl + `dreams/4`)
-//   }
-
-}])
+      function getUserDreams () {
+        $http.get(apiUrl).then(result => {
+          let dreamArrTemp = []
+          result.data.forEach(el => {
+            if (el['user_username'] === $ionicUser.details.username) {
+              dreamArrTemp.push(el)
+            }
+          })
+          $scope.userDreamsAll = dreamArrTemp
+        })
+      }
+      //   $scope.deleteDreams= function () {
+      //     let del = $scope.userDreamsAll.length - 1
+      //     $http.delete(apiUrl + `dreams/4`)
+      //   }
+    }])
