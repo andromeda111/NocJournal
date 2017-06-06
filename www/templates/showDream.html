@@ -1,0 +1,16 @@
+<ion-view title="Show Dream" id="page2">
+  <ion-content padding="true" style="background: url(img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="has-header">
+    <div id="showDream-markdown3" class="show-list-numbers-and-dots">
+      <p style="color:#FFFFFF;">Username: {{userData.username}}</p>
+    </div>
+    <ion-list id="showDream-list6">
+      <div class="item item-body transparent" id="showDream-list-item-container3">
+        <div id="showDream-markdown7" ng-repeat="dream in dreamsArr" filter="{'username':  userData.username}:true" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;font-size:11px;">{{dream.id}} {{dream.created_at}} {{dream.body}}
+          </p>
+        </div>
+      </div>
+    </ion-list>
+    <button id="showDream-button7" ng-click="getUserDreams()" class="button button-positive button-block button-outline">Get User's Dreams</button>
+  </ion-content>
+</ion-view>

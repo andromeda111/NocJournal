@@ -1,25 +1,25 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+<ion-view title="Login" hide-nav-bar="true" cache-view="false" nav-transition="none" id="page4">
+  <ion-content padding="true" style="background: url(img/pLYj0hutTWCh5f4K1TS9_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding" scroll="false">
+    <div id="login-markdown2" ng-if="error" class="show-list-numbers-and-dots">
+      <p style="color:#FF0000;">{{error}}</p>
     </div>
-  </ion-header-bar>
-  <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
+    <div class="logo-img">
+      <img src="img/SQdBuAF4RxqRDB4OLuB7_cddf8c18794475.562cf9e7ea32e.png" style="display: block; width: 40%; height: 40%; margin-left: auto; margin-right: auto;">
+    </div>
+    <form id="login-form1" class="list center-form">
+      <ion-list id="login-list2">
+        <label class="item item-input" id="login-input1">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="" ng-model="data.email">
         </label>
-        <label class="item item-input">
+        <label class="item item-input" id="login-input2">
           <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
+          <input type="password" placeholder="" ng-model="data.password">
         </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
-      </div>
+      </ion-list>
+      <div class="spacer" style="width: 290px; height: 19px;"></div>
+      <button id="login-button1" ng-click="login()" class="button button-positive button-block button-outline">Log in</button>
+      <a ui-sref="signup()" id="login-button2" class="button button-balanced button-block button-clear">Or create an account</a>
     </form>
   </ion-content>
-</ion-modal-view>
+</ion-view>
