@@ -7,14 +7,24 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
 
-      .state('menu.home', {
-    url: '/page1',
+
+  //     .state('menu.home', {
+  //   url: '/page1',
+  //   views: {
+  //     'side-menu21': {
+  //       templateUrl: 'templates/home.html',
+  //       controller: 'homeCtrl'
+  //     }
+  //   }
+  // })
+
+  .state('menu.user', {
+    url: '/user',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/home.html',
-        controller: 'homeCtrl'
+        templateUrl: 'templates/user.html',
+        controller: 'userCtrl'
       }
     }
   })
@@ -39,6 +49,36 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.calendar', {
+    url: '/calendar',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/calendar.html',
+        controller: 'calendarCtrl'
+      }
+    }
+  })
+
+  .state('menu.symbolSearch', {
+    url: '/symbolSearch',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/symbolSearch.html',
+        controller: 'symbolSearchCtrl'
+      }
+    }
+  })
+
+  .state('menu.lucidResource', {
+    url: '/lucidResource',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/lucidResource.html',
+        controller: 'lucidResourceCtrl'
+      }
+    }
+  })
+
   .state('menu', {
     url: '/side-menu21',
     templateUrl: 'templates/menu.html',
@@ -57,7 +97,7 @@ angular.module('app.routes', [])
     controller: 'signupCtrl'
   })
 
-$urlRouterProvider.otherwise('/side-menu21/page1')
+$urlRouterProvider.otherwise('/side-menu21')
 
 
 });
