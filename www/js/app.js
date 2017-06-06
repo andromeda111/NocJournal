@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services','ionic.cloud','ionic.cloud.init',])
+angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services','ionic.cloud','ionic.cloud.init', 'app.auth', 'app.allDreams', 'app.menu', 'app.post', 'app.showDream'])
 
 .config(function($ionicConfigProvider, $sceDelegateProvider){
 
@@ -34,7 +34,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 */
 .directive('disableSideMenuDrag', ['$ionicSideMenuDelegate', '$rootScope', function($ionicSideMenuDelegate, $rootScope) {
     return {
-        restrict: "A",  
+        restrict: "A",
         controller: ['$scope', '$element', '$attrs', function ($scope, $element, $attrs) {
 
             function stopDrag(){
@@ -69,7 +69,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       attrs.$observe('hrefInappbrowser', function(val){
         href = val;
       });
-      
+
       element.bind('click', function (event) {
 
         window.open(href, '_system', 'location=yes');
