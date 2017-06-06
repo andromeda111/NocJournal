@@ -39,15 +39,15 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.cloud', {
-    url: '/page3',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/cloud.html',
-        controller: 'cloudCtrl'
-      }
-    }
-  })
+  // .state('menu.cloud', {
+  //   url: '/page3',
+  //   views: {
+  //     'side-menu21': {
+  //       templateUrl: 'templates/cloud.html',
+  //       controller: 'cloudCtrl'
+  //     }
+  //   }
+  // })
 
   .state('menu.calendar', {
     url: '/calendar',
