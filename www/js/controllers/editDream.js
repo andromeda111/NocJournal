@@ -6,15 +6,15 @@ angular.module('app.editDreams', [])
     const id = $stateParams.id
     const apiUrl = 'http://dream-frog.herokuapp.com'
 
-    $scope.dream = []
+    $scope.updateDream = []
     $scope.editDream = []
     $http.get(apiUrl + `/${user}/${id}`).then(res => {
       console.log(res.data);
-      $scope.dream = res.data['0']
+      $scope.updateDream = res.data['0']
     })
 
-    // $scope.editDream = $scope.dream
-    console.log($scope.dream);
+    // $scope.editDream = $scope.updateDream
+    console.log($scope.updateDream);
 
     // $scope.editDream = []
     $scope.click = function () {
@@ -25,9 +25,9 @@ angular.module('app.editDreams', [])
         // console.log('hellooooo');
     }
 
-    $scope.editDream = function (dreamId) {
-      console.log(dreamId);
-      $http.put(apiUrl + id, $scope.dream).then(res => {
+    $scope.editDream = function (updateDream) {
+      console.log(updateDream);
+      $http.put(apiUrl + `/${user}/${id}`, updateDream).then(res => {
         console.log(res);
         // $state.go('menu')
       }).catch(err => {

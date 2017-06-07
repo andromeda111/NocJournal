@@ -1,33 +1,53 @@
-<ion-view view-title="Edit Dream">
+<ion-view view-title="New Dream">
   <ion-content padding="true" class="has-header">
-    <form class="list" ng-submit="editDream">
+    <form name="newDreamForm" class="list">
       <label class="item item-input">
         <span class="input-label">Date</span>
-        <input ng-model="dream.dream_date" datetime="MM/dd/yyyy" type="date">
+        <input ng-model="updateDream.dream_date" type="date" required>
       </label>
+
       <label class="item item-floating-label item-input" name="body">
-      <textarea rows="8" placeholder="Describe your dream" ng-model="dream.body" ng-class="{'has-error': editDreamForm.body.$invalid, 'has-success': editDreamForm.body.$valid}"></textarea></label>
+      <textarea rows="8" placeholder="Describe your dream" ng-model="updateDream.body" required ></textarea></label>
 
       <button type="button" name="button">
         <i class="icon ion-mic-a"></i>
       </button>
 
       <label class="item item-input" name="interpretation">
-        <textarea rows="4" placeholder="Self Interpretation" ng-model="dream.interpretation"></textarea></label>
-      <ion-item class="range range-positive">
+        <textarea rows="4" placeholder="Self Interpretation" ng-model="updateDream.interpretation"></textarea></label>
+
+      <div class="item range">
         <span class="input-label">Lucidity</span>
         <i class="icon ion-ios-cloudy-night-outline"></i>
-        <input type="range" value="5" min="0" max="10" step="1" name="lucidity" ng-model="dream.lucidity">
+        <input type="range" min="0" max="10" step="1" name="lucidity" ng-model="updateDream.lucidity">
         <i class="icon ion-ios-moon-outline"></i>
-      </ion-item>
+      </div>
 
-      <ion-toggle toggle-class="toggle-assertive" name="nightmare" ng-model="dream.nightmare">Nightmare</ion-toggle>
 
-      <ion-toggle toggle-class="toggle-balanced" name="recurring" ng-model="dream.recurring">Recurring</ion-toggle>
+      <ul>
+        <li class="item item-toggle">Nightmare
+          <label class="toggle toggle-assertive">
+            <input ng-model="updateDream.nightmare" type="checkbox" name="nightmare">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+
+        <li class="item item-toggle">Recurring
+          <label class="toggle toggle-balanced">
+            <input ng-model="updateDream.recurring" type="checkbox" name="recurring">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+      </ul>
+
 
       <label class="item item-select" name="emotion">
         <span class="input-label">Emotion</span>
-        <select ng-model="dream.emotion">
+        <select ng-model="updateDream.emotion">
           <option default value="">How did you feel?</option>
           <option value="happy">Happy</option>
           <option value="excited">Excited</option>
@@ -42,7 +62,7 @@
           <option value="aroused">Aroused</option>
         </select>
       </label>
-    </form>
-    <button type="submit" ng-click="click()" ng-disabled="editDreamForm" class="button button-positive button-block">Save MEEE</button>
+    <button type="submit" ng-click="editDream(updateDream)" class="button button-positive button-block">Save</button>
+  </form>
   </ion-content>
 </ion-view>
