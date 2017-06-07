@@ -35,6 +35,6 @@ angular.module('app.allDreams', [])
         console.log("Dream with ID " + `${dream.id}` + " was deleted.")
         // $http.get(apiUrl + `/${username}` + `/${id}`)
 
-        // $state.go('menu.editDream', {id: id})
+        $state.go('menu.editDream', {id: id})
       }
     }])
