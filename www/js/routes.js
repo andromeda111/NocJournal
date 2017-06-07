@@ -1,7 +1,5 @@
 angular.module('app.routes', [])
 
-// console.log($ionicUser);
-
 .config(function ($stateProvider, $urlRouterProvider) {
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -9,20 +7,20 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-      .state('menu.allDreams', {
-    url: '/all-dreams',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/all-dreams.html',
-        controller: 'allDreamsCtrl'
+    .state('menu.allDreams', {
+      url: '/all-dreams',
+      views: {
+        'auth': {
+          templateUrl: 'templates/all-dreams.html',
+          controller: 'allDreamsCtrl'
+        }
       }
-    }
-  })
+    })
 
   .state('menu.showDream', {
     url: '/show',
     views: {
-      'side-menu21': {
+      'auth': {
         templateUrl: 'templates/show-dream.html',
         controller: 'showDreamCtrl'
       }
@@ -32,7 +30,7 @@ angular.module('app.routes', [])
   .state('menu.newForm', {
     url: '/new',
     views: {
-      'side-menu21': {
+      'auth': {
         templateUrl: 'templates/new-form.html',
         controller: 'newFormCtrl'
       }
@@ -40,7 +38,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu', {
-    url: '/side-menu21',
+    url: '/auth',
     templateUrl: 'templates/menu.html',
     controller: 'menuCtrl'
   })
@@ -48,7 +46,7 @@ angular.module('app.routes', [])
   .state('menu.user', {
     url: '/user',
     views: {
-      'side-menu21': {
+      'auth': {
         templateUrl: 'templates/user.html',
         controller: 'userCtrl'
       }
@@ -67,11 +65,10 @@ angular.module('app.routes', [])
     controller: 'signupCtrl'
   })
 
-
     .state('menu.calendar', {
       url: '/calendar',
       views: {
-        'side-menu21': {
+        'auth': {
           templateUrl: 'templates/calendar.html',
           controller: 'calendarCtrl'
         }
@@ -81,7 +78,7 @@ angular.module('app.routes', [])
   .state('menu.symbol', {
     url: '/symbolism',
     views: {
-      'side-menu21': {
+      'auth': {
         templateUrl: 'templates/symbolism.html',
         controller: 'symbolismCtrl'
       }
@@ -91,7 +88,7 @@ angular.module('app.routes', [])
   .state('menu.lucid', {
     url: '/lucid',
     views: {
-      'side-menu21': {
+      'auth': {
         templateUrl: 'templates/lucid.html',
         controller: 'lucidCtrl'
       }
