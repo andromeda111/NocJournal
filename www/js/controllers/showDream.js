@@ -4,13 +4,13 @@ angular.module('app.showDream', [])
     function ($scope, $stateParams, $ionicUser, $http) {
       const apiUrl = 'https://dream-frog.herokuapp.com'
       const user = $ionicUser.details.username
-      const id = req.params.id
+      const id = $stateParams.id
       $scope.dream = {}
 
       getOneDream()
 
       function getOneDream () {
-        $http.get(apiUrl + '/' + `${user}` + '/' + `${id}`)
+        $http.get(apiUrl + `/${user}` + `/${id}`)
           .then(dream => {
             if (dream.nightmare) {
               dream.nightmare = 'Yes'

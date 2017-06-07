@@ -28,7 +28,7 @@ angular.module('app.routes', [])
     })
 
   .state('menu.showDream', {
-    url: '/show',
+    url: '/show/{id}',
     views: {
       'auth': {
         templateUrl: 'templates/show-dream.html',

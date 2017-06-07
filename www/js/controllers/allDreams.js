@@ -19,6 +19,12 @@ angular.module('app.allDreams', [])
         })
       }
 
+      $scope.showDream = function (dream) {
+        const id = dream.id
+
+        $state.go('menu.showDream', {id: id})
+      }
+
       $scope.deleteDream = function (dream) {
         const id = dream.id
         const username = dream['user_username']
