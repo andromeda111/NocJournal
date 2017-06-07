@@ -18,7 +18,7 @@ function ($scope, $stateParams, $ionicUser, $ionicAuth, $state, $ionicHistory, $
         $ionicHistory.nextViewOptions({
           historyRoot: true
         });
-        $state.go('menu.user');
+        $state.go('menu.allDreams');
       });
     }
 
@@ -26,7 +26,7 @@ function ($scope, $stateParams, $ionicUser, $ionicAuth, $state, $ionicHistory, $
         $scope.error = '';
         $ionicAuth.login('basic', $scope.data).then(function(){
           	$rootScope.$broadcast('login_change');
-            $state.go('menu.user');
+            $state.go('menu.allDreams');
         }, function(data){
             console.log(data)
             $scope.error = 'Error logging in.';
@@ -61,7 +61,7 @@ function ($scope, $stateParams, $ionicAuth, $ionicUser, $state, $ionicHistory, $
               $ionicHistory.nextViewOptions({
                 historyRoot: true
               });
-              $state.go('menu.home');
+              $state.go('menu.allDreams');
             });
         }, function(err) {
 
