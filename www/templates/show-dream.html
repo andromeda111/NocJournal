@@ -1,15 +1,10 @@
 <ion-view title="{{dream.dream_date}}">
-  <!-- <ion-nav-buttons side="left" class="has-header">
-    <button class="button button-stable icon ion-ios-arrow-back"></button>
-  </ion-nav-buttons>
-  <ion-nav-buttons side="right" class="has-header">
-    <button class="button button-stable icon ion-android-create"></button>
-  </ion-nav-buttons> -->
   <ion-content padding="true" class="has-header">
+    <h4 style="color:#000000;font-weight:400;">Dream:</h4>
     <div class="show-list-numbers-and-dots">
       <p style="color:#000000;">{{dream.body}}</p>
     </div>
-    <h4 style="color:#000000;font-weight:400;">Interpretation</h4>
+    <h4 style="color:#000000;font-weight:400;">Interpretation:</h4>
     <div class="show-list-numbers-and-dots">
       <p style="color:#000000;">{{dream.interpretation}}</p>
     </div>
@@ -19,7 +14,7 @@
       <ion-item class="item-icon-left">
         <i class="icon ion-social-freebsd-devil"></i>Nightmare: {{dream.nightmare}}</ion-item>
       <ion-item class="item-icon-left">
-        <i class="icon ion-reply-all"></i>Reoccurring: {{dream.interpretation}}</ion-item>
+        <i class="icon ion-reply-all"></i>Reoccurring: {{dream.recurring}}</ion-item>
       <ion-item class="item-icon-left">
         <i class="icon ion-heart-broken"></i>Emotion: {{dream.emotion}}</ion-item>
     </ion-list>

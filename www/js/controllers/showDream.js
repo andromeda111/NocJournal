@@ -11,22 +11,27 @@ angular.module('app.showDream', [])
 
       function getOneDream () {
         $http.get(apiUrl + `/${user}` + `/${id}`)
-          .then(dream => {
+          .then(result => {
+            const dream = result.data[0]
+            let emotionStr = dream.emotion
+
             if (dream.nightmare) {
               dream.nightmare = 'Yes'
             } else {
               dream.nightmare = 'No'
             }
 
-            if (dream.reoccurring) {
-              dream.reoccurring = 'Yes'
+            if (dream.recurring) {
+              dream.recurring = 'Yes'
             } else {
-              dream.reoccurring = 'No'
+              dream.recurring = 'No'
             }
 
+            const firstLetter = emotionStr.substring(0, 1).toUpperCase()
+            const everythingElse = emotionStr.substring(1)
+            dream.emotion = firstLetter + everythingElse
+
             $scope.dream = dream
-          }).catch(err => {
-            throw err
           })
       }
     }])
