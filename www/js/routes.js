@@ -17,6 +17,16 @@ angular.module('app.routes', [])
       }
     })
 
+    .state('menu.editDream', {
+      url:'/edit-dream',
+      views:{
+        'side-menu21': {
+          templateUrl: 'templates/edit-dream.html',
+          controller: 'editDreamsCtrl'
+        }
+      }
+    })
+
   .state('menu.showDream', {
     url: '/show',
     views: {
@@ -36,6 +46,8 @@ angular.module('app.routes', [])
       }
     }
   })
+
+
 
   .state('menu', {
     url: '/auth',
