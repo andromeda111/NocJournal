@@ -1,7 +1,7 @@
 angular.module('app.editDreams', [])
 
-.controller('editDreamsCtrl', ['$scope', '$stateParams', '$ionicUser', '$http',
-  function($scope, $stateParams, $ionicUser, $http){
+.controller('editDreamsCtrl', ['$scope', '$stateParams', '$ionicUser', '$http','$state',
+  function($scope, $stateParams, $ionicUser, $http, $state){
     const user = $ionicUser.details.username
     const id = $stateParams.id
     const apiUrl = 'http://dream-frog.herokuapp.com'
@@ -28,8 +28,7 @@ angular.module('app.editDreams', [])
     $scope.editDream = function (updateDream) {
       console.log(updateDream);
       $http.put(apiUrl + `/${user}/${id}`, updateDream).then(res => {
-        console.log(res);
-        // $state.go('menu')
+      $state.go('menu.allDreams')
       }).catch(err => {
         console.error(err);
       })
