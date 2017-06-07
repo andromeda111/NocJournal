@@ -18,8 +18,9 @@ angular.module('app.allDreams', [])
           $scope.userDreamsAll = dreamArrTemp
         })
       }
-      //   $scope.deleteDreams= function () {
-      //     let del = $scope.userDreamsAll.length - 1
-      //     $http.delete(apiUrl + `dreams/4`)
-      //   }
+
+      $scope.deleteDream= function (dreamId) {
+        console.log(dreamId)
+        $http.delete(apiUrl + `dreams/${}`)
+      }
     }])
