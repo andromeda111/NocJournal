@@ -9,7 +9,6 @@ angular.module('app.allDreams', [])
 
       function getUserDreams () {
         $http.get(apiUrl).then(result => {
-          console.log(result.data);
           let dreamArrTemp = []
           result.data.forEach(el => {
             if (el['user_username'] === $ionicUser.details.username) {
