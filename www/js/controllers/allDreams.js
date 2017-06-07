@@ -22,7 +22,9 @@ angular.module('app.allDreams', [])
       $scope.deleteDream = function (dream) {
         const id = dream.id
         const username = dream['user_username']
-        $http.delete(apiUrl + `/${username}/${id}`)
+        $http.delete(apiUrl + `/${username}/${id}`).then(() => {
+          getUserDreams()
+        })
 
         // $state.go('menu.allDreams')
       }
