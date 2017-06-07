@@ -31,3 +31,8 @@ function ($scope, $stateParams) {
 function ($scope, $stateParams) {
 
 }])
+
+.controller('editDreamsCtrl', ['$scope', '$stateParams',
+function ($scope, $stateParams) {
+
+}])
