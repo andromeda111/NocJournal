@@ -2,7 +2,7 @@
   <ion-content padding="true" style="background: url(img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="has-header">
     <!-- <button id="showDream-button7" ng-click="getUserDreams()" class="button button-positive button-block button-outline">Get User's Dreams</button> -->
     <div id="showDream-container1" ng-repeat="dream in userDreamsAll">
-      <ion-list id="showDream-list7">
+      <ion-list id="showDream-list7" ui-sref="menu.user()">
         <ion-item class="item-avatar transparent" id="showDream-list-item7">
           <h2>{{dream.dream_date}}</h2>
           <p>{{dream.body}}</p>
