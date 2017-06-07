@@ -20,7 +20,7 @@ angular.module('app.routes', [])
     .state('menu.editDream', {
       url:'/edit-dream/{id}',
       views:{
-        'side-menu21': {
+        'auth': {
           templateUrl: 'templates/edit-dream.html',
           controller: 'editDreamsCtrl'
         }
