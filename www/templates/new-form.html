@@ -15,24 +15,35 @@
 
       <label class="item item-input" name="interpretation">
         <textarea rows="4" placeholder="Self Interpretation" ng-model="newDream.interpretation"></textarea></label>
-      <ion-item class="range range-positive">
+
+      <div class="item range">
         <span class="input-label">Lucidity</span>
         <i class="icon ion-ios-cloudy-night-outline"></i>
-        <input type="range" value="0" min="0" max="10" step="1" name="lucidity" ng-model="newDream.lucidity">
+        <input type="range" min="0" max="10" step="1" name="lucidity" ng-model="newDream.lucidity">
         <i class="icon ion-ios-moon-outline"></i>
-      </ion-item>
+      </div>
 
-      <!-- <ion-toggle toggle-class="toggle-assertive" name="nightmare" ng-checked="newDream.nightmare" ng-model="newDream.nightmare">Nightmare</ion-toggle> -->
 
-      <label class="item item-input item-toggle toggle toggle-assertive">
-        Nightmare
-        <input name="nightmare" ng-model="newDream.nightmare" type="checkbox">
-        <div class="track">
-          <div class="handle"></div>
-        </div>
-      </label>
+      <ul>
+        <li class="item item-toggle">Nightmare
+          <label class="toggle toggle-assertive">
+            <input ng-model="newDream.nightmare" type="checkbox" name="nightmare">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
 
-      <ion-toggle toggle-class="toggle-balanced" name="recurring" ng-checked="false" ng-model="newDream.recurring">Recurring</ion-toggle>
+        <li class="item item-toggle">Recurring
+          <label class="toggle toggle-balanced">
+            <input ng-model="newDream.recurring" type="checkbox" name="recurring">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+      </ul>
+
 
       <label class="item item-select" name="emotion">
         <span class="input-label">Emotion</span>
