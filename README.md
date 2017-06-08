@@ -21,6 +21,15 @@ Explore the symbols that you may encounter in your dreams.
 ![sceren shot of symbols](https://user-images.githubusercontent.com/24262724/26952907-588a0b30-4c5c-11e7-821d-aa253698616f.png)
 
 
+****** PUT GRAPH OF DREAMS HERE.****
+
+![screennshot of graph]
+
+
+
+##What to Install 
+
+
 
 ity is installed:
 ```bash
