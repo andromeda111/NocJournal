@@ -1,7 +1,7 @@
 angular.module('app.showDream', [])
 
-  .controller('showDreamCtrl', ['$scope', '$stateParams', '$ionicUser', '$http',
-    function ($scope, $stateParams, $ionicUser, $http) {
+  .controller('showDreamCtrl', ['$scope', '$stateParams', '$ionicUser', '$http', '$state',
+    function ($scope, $stateParams, $ionicUser, $http, $state) {
       const apiUrl = 'https://dream-frog.herokuapp.com'
       const user = $ionicUser.details.username
       const id = $stateParams.id
@@ -34,4 +34,11 @@ angular.module('app.showDream', [])
             $scope.dream = dream
           })
       }
+
+      $scope.editDream = function (dream) {
+        const id = dream.id
+        const username = dream['user_username']
+        $state.go('menu.editDream', {id: id})
+      }
+
     }])
