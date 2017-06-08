@@ -5,87 +5,110 @@ angular.module('app.user', [])
     const user = $ionicUser.details.username
     const apiUrl = 'https://dream-frog.herokuapp.com'
 
-    $scope.chartObject = {};
+    $scope.userDreamsAll = []
 
-$scope.chartObject.type = "PieChart";
+    getUserDreams()
 
-$scope.chartObject.data = {
-    "cols": [
-        { id: "t", label: "Emotions", type: "string" },
-        { id: "s", label: "Occurence", type: "number" }
-    ], "rows": [
-        {
-            c: [
-               { v: "One" },
-               { v: 1 },
-            ]
-        },
-        {
-            c: [
-               { v: "Two" },
-               { v: 2 }
-            ]
-        },
-        {
-            c: [
-               { v: "Three" },
-               { v: 3 },
-            ]
-        },
-        {
-            c: [
-               { v: "Four" },
-               { v: 1 },
-            ]
-        },
-        {
-            c: [
-               { v: "Five" },
-               { v: 1 },
-            ]
-        },
-        {
-            c: [
-               { v: "Six" },
-               { v: 6 }
-            ]
-        },
-        {
-            c: [
-               { v: "Seven" },
-               { v: 5 },
-            ]
-        },
-        {
-            c: [
-               { v: "Eight" },
-               { v: 1 },
-            ]
-        },
-        {
-            c: [
-               { v: "Nine" },
-               { v: 7 },
-            ]
-        },
-        {
-            c: [
-               { v: "Ten" },
-               { v: 5 },
-            ]
-        }
-    ]
-};
+    function getUserDreams () {
+      $http.get(apiUrl).then(result => {
+        let dreamArrTemp = []
+        result.data.forEach(el => {
+          if (el['user_username'] === $ionicUser.details.username) {
+            dreamArrTemp.push(el)
+          }
+        })
+        $scope.userDreamsAll = dreamArrTemp
+        setupChart($scope.userDreamsAll)
+      })
+    }
 
-$scope.chartObject.options = {
-    'legend':'bottom',
-    // 'title':'Dream History Analysis',
-    'is3D':false,
-    'sliceVisibilityThreshold': 0.1,
-    'width':350,
-    'height':300,
-    'colors': ['#182033', '#273453', '#34466F', '#41578B', '#4E69A6', '#667FB7', '#8296C4', '#9EADD1', '#BAC5DE', '#D5DCEB']
-};
+    function setupChart (dreamData) {
+      console.log(dreamData);
+
+      $scope.chartObject = {};
+
+      $scope.chartObject.type = "PieChart";
+
+      $scope.chartObject.data = {
+          "cols": [
+              { id: "t", label: "Emotions", type: "string" },
+              { id: "s", label: "Occurence", type: "number" }
+          ], "rows": [
+              {
+                  c: [
+                     { v: "Afraid" },
+                     { v: 1 },
+                  ]
+              },
+              {
+                  c: [
+                     { v: "Angry" },
+                     { v: 2 }
+                  ]
+              },
+              {
+                  c: [
+                     { v: "Anxious" },
+                     { v: 3 },
+                  ]
+              },
+              {
+                  c: [
+                     { v: "Aroused" },
+                     { v: 1 },
+                  ]
+              },
+              {
+                  c: [
+                     { v: "Confused" },
+                     { v: 1 },
+                  ]
+              },
+              {
+                  c: [
+                     { v: "Frustrated" },
+                     { v: 1 },
+                  ]
+              },
+              {
+                  c: [
+                     { v: "Happy" },
+                     { v: 6 }
+                  ]
+              },
+              {
+                  c: [
+                     { v: "Indifferent" },
+                     { v: 5 },
+                  ]
+              },
+              {
+                  c: [
+                     { v: "Sad" },
+                     { v: 1 },
+                  ]
+              },
+              {
+                  c: [
+                     { v: "Silly" },
+                     { v: 7 },
+                  ]
+              }
+          ]
+      };
+
+  $scope.chartObject.options = {
+      'legend':'bottom',
+      // 'title':'Dream History Analysis',
+      'is3D':false,
+      'sliceVisibilityThreshold': 0.1,
+      'width':350,
+      'height':300,
+      'colors': ['#182033', '#273453', '#34466F', '#41578B', '#4E69A6', '#667FB7', '#8296C4', '#9EADD1', '#BAC5DE', '#D5DCEB']
+  };
+}
+
+
 
 //     $scope.all = []
 //     getStats()
@@ -109,4 +132,4 @@ $scope.chartObject.options = {
   }
 ])
 
-// silly, confused, anxious, afraid, frustrated, angry, sad, indifferent, aroused}
+// afraid, angry, anxious, aroused, confused, frustrated, happy, indifferent, sad, silly
