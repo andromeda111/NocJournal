@@ -15,7 +15,7 @@ angular.module('app.editDreams', [])
 
     $scope.editDream = function (updateDream) {
       $http.put(`${apiUrl}/${user}/${id}/`, updateDream).then(res => {
-        $state.go('menu.allDreams')
+        $state.go('menu.showDream', {id: id})
       })
     }
 

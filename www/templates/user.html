@@ -1,13 +1,13 @@
 <ion-view cache-view="false" title="User" id="page1">
   <ion-content padding="true" style="background: url(img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="has-header">
-<div class="card">
+<div class="text-center graph-card">
 
 
-    <h4>Dream Statistics</h4>
+    <h4 class="text-center graph-card">Dream Statistics: {{userName}}</h4>
 
-    <div google-chart chart="chartObject" class="chart-container"></div>
+    <div google-chart chart="chartObject" class="chart-container graph-card"></div>
 </div>
-<div class="card stats">
+<div class="card stats transparent">
     <div class="row">
       <div class="col cell">
         <h5>Dreams Recorded:</h5>
@@ -21,17 +21,17 @@
         <h5>Averge Dream Lucidity:</h5>
       </div>
       <div class="col cell">
-         <h5>{{avgLucidity}}</h5>
+         <h5>{{avgLucidity}}%</h5>
       </div>
     </div>
     <div class="row">
       <div class="col cell">
         <h5>Nightmares:</h5>
       </div>
-      <div class="col cell">
+      <div class="col cell-sm">
          <h5>{{numNightmare}}</h5>
       </div>
-      <div class="col cell">
+      <div class="col cell-sm">
          <h5>{{avgNightmares}}%</h5>
       </div>
     </div>
@@ -39,8 +39,11 @@
       <div class="col cell">
         <h5>Recurring Dreams:</h5>
       </div>
-      <div class="col cell">
+      <div class="col cell-sm">
          <h5>{{numRecurring}}</h5>
+      </div>
+      <div class="col cell-sm">
+         <h5>{{avgRecurring}}%</h5>
       </div>
     </div>
 </div>

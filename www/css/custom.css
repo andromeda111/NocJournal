@@ -53,6 +53,15 @@
   border: 1px solid black;
 }
 
+.cell-sm {
+  max-width: 87.5px;
+  border: 1px solid black;
+}
+
 .stats {
   text-align: center;
+}
+
+.graph-card {
+  color: white;
 }

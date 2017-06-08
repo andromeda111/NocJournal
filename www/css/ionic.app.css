@@ -6283,12 +6283,15 @@ button.item.item-button-right {
 .item-button-left.item-button-right .button:last-child {
   left: auto; }
 
+/*.item-avatar, .item-avatar .item-content {
+  background-color: none;
+}*/
 .item-avatar,
 .item-avatar .item-content,
 .item-avatar-left,
 .item-avatar-left .item-content {
   padding-left: 72px;
-  min-height: 72px; }
+  min-height: 72px;}
   .item-avatar > img:first-child,
   .item-avatar .item-image,
   .item-avatar .item-content > img:first-child,
@@ -9824,9 +9827,6 @@ a.button {
   .error-box p {
     color: white;
     margin: 0px; }
-
-/*.logo-img {
-  filter: invert(100%); }*/
 
 .transparent {
   border: 1px solid black;

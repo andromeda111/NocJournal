@@ -4,7 +4,7 @@ angular.module('app.user', [])
   function ($scope, $stateParams, $http, $state, $ionicUser) {
     const user = $ionicUser.details.username
     const apiUrl = 'https://dream-frog.herokuapp.com'
-
+    $scope.userName = user
     $scope.userDreamsAll = []
 
     getUserDreams()
@@ -85,8 +85,9 @@ angular.module('app.user', [])
         $scope.numRecurring++
       }
       })
-      $scope.avgLucidity = $scope.lucidityCount / dreamData.length
+      $scope.avgLucidity = ($scope.lucidityCount / dreamData.length) * 10
       $scope.avgNightmares = ($scope.numNightmare / dreamData.length) * 100
+      $scope.avgRecurring = ($scope.numRecurring / dreamData.length) * 100
 
       $scope.chartObject = {};
 
@@ -162,12 +163,15 @@ angular.module('app.user', [])
 
   $scope.chartObject.options = {
       'legend':'bottom',
+      'backgroundColor': 'none',
       'title':'Dream Emotions',
       'is3D':true,
       'chartArea': {width:"100%",height:"80%"},
       'sliceVisibilityThreshold': 0.1,
       'width':350,
       'height':300,
+      'legendTextStyle': {color: '#FFF'},
+      'titleTextStyle': {color: '#FFF'},
       'colors': ['#182033', '#273453', '#34466F', '#41578B', '#4E69A6', '#667FB7', '#8296C4', '#9EADD1', '#BAC5DE', '#D5DCEB']
   };
 }
