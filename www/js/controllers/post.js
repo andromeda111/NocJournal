@@ -20,8 +20,10 @@ angular.module('app.post', [])
     // Speech to text variables and fn
     $scope.dreamStringArray = []
     $scope.dreamString = ''
+    $scope.recordButton = true
 
     $scope.record = function () {
+      $scope.recordButton = false
       var recognition = new webkitSpeechRecognition() // To Computer
       // var recognition = new SpeechRecognition() // To Device, iPhone?
       recognition.lang = '' // Defaults to device lang setting
@@ -53,7 +55,7 @@ angular.module('app.post', [])
           $scope.dreamString = $scope.dreamStringArray.join(" ")
 
           $scope.newDream.body = $scope.dreamString
-
+          $scope.recordButton = true
           $scope.$apply()
         }
       }
