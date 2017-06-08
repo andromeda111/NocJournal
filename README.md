@@ -29,6 +29,23 @@ Explore the symbols that you may encounter in your dreams.
 
 ##What to Install 
 
+-Node.js
+-PostgreSQL
+-ExpressJS
+-Knex.js
+-Ionic Creator 
+-Angular 
+-Javascript
+
+##Future Development 
+
+- Having Calendar & archiving dreams in the menu. IE: A calendar will mark the days you had dreams. 
+
+- Lucid Dreaming Resources: Have a resource to inform users how to experience lucid dreamining & how to train yourself to control the dream efficently. 
+
+- Facebook integration: Use ionic "passport" so users can log in/sign up with their facebook login. 
+
+
 
 
 ity is installed:
