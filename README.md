@@ -1,8 +1,7 @@
-Ionic App Base
+NocJournal 
 =====================
 
-A starting project for Ionic that optionally supports using custom SCSS.
-
+Having dreams are a part of every individual, and for those that are curious & inspired by their dreams have the ability to  their dreams with NocJournal. NocJournal has the ability to let users find symbols & meaning through the NocJournal app. Our features allows the user to add new dreams, find trends through our graphs & symbol documentations. Have an interest to explore your subconcious? NocJournal is one of the first steps to unlock the mystery of your dreams. 
 ## Using this project
 
 We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
