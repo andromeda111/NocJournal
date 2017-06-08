@@ -3,7 +3,7 @@ NocJournal
 
 Having dreams are a part of every individual, and for those that are curious & inspired by their dreams have the ability to  their dreams with NocJournal. NocJournal has the ability to let users find symbols & meaning through the NocJournal app. Our features allows the user to add new dreams, find trends through our graphs & symbol documentations. Have an interest to explore your subconcious? NocJournal is one of the first steps to unlock the mystery of your dreams. 
 ## NocJournal 
-![screenshot of homepage]
+![screenshot of homepage](https://user-images.githubusercontent.com/24262724/26952250-7c7a159c-4c59-11e7-8683-4d30be8e0b1a.png)
 ity is installed:
 
 ```bash
