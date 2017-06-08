@@ -39,8 +39,8 @@ angular.module('app.post', [])
           str = str.replace("s***", "shit")
           str = str.replace("a******", "asshole")
 
-          let firstLetter = str.substring(0, 1).toUpperCase()
-          let everythingElse = str.substring(1)
+          const firstLetter = str.substring(0, 1).toUpperCase()
+          const everythingElse = str.substring(1)
 
           $scope.recognizedText = firstLetter + everythingElse
           const a = $scope.recognizedText
