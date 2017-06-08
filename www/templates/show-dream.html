@@ -1,4 +1,4 @@
-<ion-view title="{{dream.dream_date | date: 'EEEE, MMMM dd yyyy'}}">
+<ion-view cache-view="false" title="{{dream.dream_date | date: 'EEEE, MMMM dd yyyy'}}">
   <ion-content padding="true" class="has-header">
       <h3>{{dream.dream_date | date:'MMM dd yyyy'}}</h3>
     <h4>Dream:</h4>
@@ -20,8 +20,9 @@
         <i class="icon ion-heart-broken"></i>Emotion: {{dream.emotion}}</ion-item>
     </ion-list>
 
-    <button ng-click="editDream(dream)" class="button-balanced">Edit</button>
-
+    <div style="height: 7px;"></div>
+    <button ng-click="editDream(dream)" class="button button-royal" type="button" name="button" style="width: 100%;">Edit</button>
+    <div style="height: 7px;"></div>
 
   </ion-content>
 </ion-view>

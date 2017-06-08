@@ -27,9 +27,13 @@ angular.module('app.showDream', [])
               dream.recurring = 'No'
             }
 
-            const firstLetter = emotionStr.substring(0, 1).toUpperCase()
-            const everythingElse = emotionStr.substring(1)
-            dream.emotion = firstLetter + everythingElse
+            if (emotionStr) {
+              const firstLetter = emotionStr.substring(0, 1).toUpperCase()
+              const everythingElse = emotionStr.substring(1)
+              dream.emotion = firstLetter + everythingElse
+            } else {
+              dream.emotion = "None"
+            }
 
             $scope.dream = dream
           })

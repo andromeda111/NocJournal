@@ -9,9 +9,7 @@
       <label class="item item-floating-label item-input" name="body">
       <textarea rows="8" placeholder="Describe your dream" ng-model="updateDream.body" required ></textarea></label>
 
-      <button type="button" name="button">
-        <i class="icon ion-mic-a"></i>
-      </button>
+      <br>
 
       <label class="item item-input" name="interpretation">
         <textarea rows="4" placeholder="Self Interpretation" ng-model="updateDream.interpretation"></textarea></label>
@@ -62,7 +60,9 @@
           <option value="aroused">Aroused</option>
         </select>
       </label>
-    <button type="submit" ng-click="editDream(updateDream)" class="button button-positive button-block">Save</button>
+    <div style="height: 7px;"></div>
+    <button type="submit" ng-click="editDream(updateDream)" class="button button-positive button-balanced" style="width: 100%;">Save</button>
+    <div style="height: 7px;"></div>
   </form>
   </ion-content>
 </ion-view>

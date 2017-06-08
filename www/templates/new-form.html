@@ -9,14 +9,16 @@
       <label class="item item-floating-label item-input" name="body">
       <textarea rows="8" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
 
+      <div style="height: 7px;"></div>
       <!-- Ready to record button -->
-      <button ng-if="recordButton" class="button button-royal" ng-click="record()" type="button" name="button">
+      <button ng-if="recordButton" class="button button-royal" ng-click="record()" type="button" name="button" style="width: 100%;">
         <i class="icon ion-mic-a"></i> Record
       </button>
       <!-- Listening record button -->
-      <button ng-if="!recordButton" class="button button-assertive" type="button" name="button">
+      <button ng-if="!recordButton" class="button button-assertive" type="button" name="button" style="margin: auto;">
         <i class="icon ion-mic-a"></i> Listening
       </button>
+      <div style="height: 7px;"></div>
 
       <label class="item item-input" name="interpretation">
         <textarea rows="4" placeholder="Self Interpretation" ng-model="newDream.interpretation"></textarea></label>
@@ -67,7 +69,9 @@
           <option value="aroused">Aroused</option>
         </select>
       </label>
-    <button type="submit" ng-click="createDream(newDream)" class="button button-positive button-block">Save</button>
+    <div style="height: 7px;"></div>
+    <button type="submit" ng-click="createDream(newDream)" class="button button-positive button-balanced" style="width: 100%;">Save</button>
+    <div style="height: 7px;"></div>
   </form>
   </ion-content>
 </ion-view>
