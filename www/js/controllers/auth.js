@@ -29,7 +29,7 @@ function ($scope, $stateParams, $ionicUser, $ionicAuth, $state, $ionicHistory, $
             $state.go('menu.allDreams');
         }, function(data){
             console.log(data)
-            $scope.error = 'Error logging in.';
+            $scope.error = 'Invalid login';
         })
     }
 
@@ -48,7 +48,25 @@ function ($scope, $stateParams, $ionicAuth, $ionicUser, $state, $ionicHistory, $
 
     $scope.signup = function(){
 
-        $scope.error = '';
+        $scope.error = ''
+        const email = $scope.data.email
+        const user = $scope.data.username
+        const pw = $scope.data.password
+
+        if (!email){
+          $scope.error = 'Email is invalid'
+          return
+        }
+
+        if (!user || user.length < 4){
+          $scope.error = 'Username should be at least 4 characters'
+          return
+        }
+
+        if (!pw || pw.length < 6){
+          $scope.error = 'Password should be at least 6 characters'
+          return
+        }
 
         $ionicAuth.signup($scope.data).then(function() {
             // `$ionicUser` is now registered

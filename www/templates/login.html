@@ -1,25 +1,25 @@
 <ion-view title="Login" hide-nav-bar="true" cache-view="false" nav-transition="none" id="page4">
   <ion-content padding="true" style="background: url(img/pLYj0hutTWCh5f4K1TS9_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding" scroll="false">
-    <div id="login-markdown2" ng-if="error" class="show-list-numbers-and-dots">
-      <p style="color:#FF0000;">{{error}}</p>
-    </div>
     <div class="logo-img">
       <img src="img/nocjournal-logo1.png"  id="nocjournal-logo">
+    </div>
+    <div id="login-markdown2" ng-if="error" class="show-list-numbers-and-dots">
+      <p style="color:#FF0000;font-size:20px;text-align:center;">{{error}}</p>
     </div>
     <form id="login-form1" class="list center-form">
       <ion-list id="login-list2">
         <label class="item item-input" style="border-radius: 8px 8px 0px 0px" id="login-input1">
           <span class="input-label">Email</span>
-          <input type="email" placeholder="" ng-model="data.email">
+          <input type="email" placeholder="Email" ng-model="data.email">
         </label>
         <label class="item item-input" style="border-radius: 0px 0px 8px 8px" id="login-input2">
           <span class="input-label">Password</span>
-          <input type="password" placeholder="" ng-model="data.password">
+          <input type="password" placeholder="Password" ng-model="data.password">
         </label>
       </ion-list>
       <div class="spacer" style="width: 290px; height: 10px;"></div>
       <button id="login-button1" style="border-radius: 8px" ng-click="login()" class="button button-royal button-block button-solid">Log in</button>
-      <a ui-sref="signup()" id="login-button2" class="button button-balanced button-block button-clear">Or create an account</a>
+      <a ui-sref="signup()" id="login-button2" class="button button-balanced button-block button-clear">Or create an account.</a>
     </form>
   </ion-content>
 </ion-view>

@@ -35,6 +35,7 @@ angular.module('app.post', [])
 
           // Add profanity back in  ^_____^
           str = str.replace("f******", "fucking")
+          str = str.replace("f*****", "fucked")
           str = str.replace("f***", "fuck")
           str = str.replace("b*******", "bitching")
           str = str.replace("b****", "bitch")
