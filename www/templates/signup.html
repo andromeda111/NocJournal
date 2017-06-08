@@ -3,25 +3,26 @@
     <div id="signup-markdown1" ng-if="error" class="show-list-numbers-and-dots">
       <p style="color:#FF0000;font-size:12px;">{{error}}</p>
     </div>
-    <form id="signup-form2" class="list">
-      <div class="logo-img">
-        <img src="img/SQdBuAF4RxqRDB4OLuB7_cddf8c18794475.562cf9e7ea32e.png" style="display: block; width: 40%; height: 40%; margin-left: auto; margin-right: auto;">
-      </div>
+    <div class="logo-img">
+      <img id="nocjournal-logo" src="img/nocjournal-logo1.png">
+    </div>
+    <form id="signup-form2" class="list center-form">
       <ion-list id="signup-list3">
-        <label class="item item-input transparent" id="signup-input4">
+        <label class="item item-input" id="signup-input4">
           <span class="input-label">Email</span>
           <input type="email" placeholder="" ng-model="data.email">
         </label>
-        <label class="item item-input transparent" id="signup-input3">
+        <label class="item item-input" id="signup-input3">
           <span class="input-label">Username</span>
           <input type="text" placeholder="" ng-model="data.username">
         </label>
-        <label class="item item-input transparent" id="signup-input5">
+        <label class="item item-input" id="signup-input5">
           <span class="input-label">Password</span>
-          <input type="text" placeholder="" ng-model="data.password">
+          <input type="password" placeholder="" ng-model="data.password">
         </label>
       </ion-list>
-      <button id="signup-button3" ng-click="signup()" style="border-radius:0px 0px 0px 0px;" class="button button-positive button-block button-outline">Sign up</button>
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
+      <button id="signup-button3" ng-click="signup()" style="border-radius:0px 0px 0px 0px;" class="button button-positive button-block button-solid">Sign up</button>
       <a ui-sref="login()" id="signup-button4" style="border-radius:0px 0px 0px 0px;" class="button button-balanced button-block button-clear">Already signed up?</a>
     </form>
   </ion-content>

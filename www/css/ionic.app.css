@@ -9825,8 +9825,8 @@ a.button {
     color: white;
     margin: 0px; }
 
-.logo-img {
-  filter: invert(100%); }
+/*.logo-img {
+  filter: invert(100%); }*/
 
 .transparent {
   border: 1px solid black;
