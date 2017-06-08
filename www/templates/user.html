@@ -2,7 +2,9 @@
   <ion-content padding="true" class="has-header">
     <h1>Dream Stats</h1>
     <p>Total number of nightmares: {{all.nightmareCounter}}</p>
+    <ng-pluralize count="all.nightmareCounter" when="{'zero': 'You haven't recorded any nightmares.', 'one': 'You have recorded 1 nightmare.', 'other': 'You have recorded {} nightmares.'}"></ng-pluralize>
     <p>Total number of recurring dreams: {{all.recurringCounter}}</p>
+        <ng-pluralize count="all.recurringCounter" when="{'zero': 'You haven't recorded any recurring dreams.', 'one': 'You have recorded 1 recurring dream.', 'other': 'You have recorded {} recurring dreams.'}"></ng-pluralize>
 
 <!-- <p>{{all.emotionCounter.confused}}</p> -->
     <table>Dream emotion occurences:

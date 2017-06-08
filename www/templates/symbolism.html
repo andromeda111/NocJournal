@@ -1,3 +1,13 @@
 <ion-view title="symbolSearch" id="page4">
   <ion-content padding="true" class="has-header"></ion-content>
+
+  <!-- <button ng-click="getAllSymbols()" class="button-balanced">Browse Dream Symbols</button> -->
+
+    <input ng-model="searchFilter.symbol" type="search" class="form-control input-sm search-form" placeholder="Filter">
+
+  <ion-list>
+    <ion-item ng-repeat="theme in symbols | filter:searchFilter | orderBy:symbol" class="item-avatar transparent">
+      <h2>{{theme.symbol}}</h2>
+      <p>{{theme.meaning}}</p>
+    </ion-item>
 </ion-view>
