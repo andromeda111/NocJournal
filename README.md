@@ -37,7 +37,7 @@ Explore the symbols that you may encounter in your dreams.
 -Angular 
 -Javascript
 
-##Future Development 
+## Future Development 
 
 - Having Calendar & archiving dreams in the menu. IE: A calendar will mark the days you had dreams. 
 
@@ -45,21 +45,16 @@ Explore the symbols that you may encounter in your dreams.
 
 - Facebook integration: Use ionic "passport" so users can log in/sign up with their facebook login. 
 
+## Our Project 
 
+< link to app here> 
 
+Created By:
 
-ity is installed:
-```bash
-$ npm install -g ionic
-```
+John Seymour: https://github.com/andromeda111
 
-Then run: 
+Alyssa Evans: https://github.com/missalyss
 
-```bash
-$ ionic start myProject tabs
-```
+Amalia Fergin: https://github.com/amaliaclaire
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
-
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+Stefan Baatz: https://github.com/Baatzy
