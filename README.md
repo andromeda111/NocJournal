@@ -12,8 +12,13 @@ Having dreams are a part of every individual, and for those that are curious & i
 
 ## Features 
 
-Record & document your new dreams. Rank your dreams in regards to lucidity, nightmare occurance, reccuring, the emotions that you've experienced during your dream. 
+Record & document your new dreams. The user can rank and organize their dreams in recurrence, nightmares & lucidity.  
 
+![screenshot of new dream](https://user-images.githubusercontent.com/24262724/26952462-6a3abfac-4c5a-11e7-99a3-9cc0d45367d5.png)
+
+Explore the symbols that you may encounter in your dreams. 
+
+![sceren shot of symbols](https://user-images.githubusercontent.com/24262724/26952907-588a0b30-4c5c-11e7-821d-aa253698616f.png)
 
 
 
