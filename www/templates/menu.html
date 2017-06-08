@@ -19,22 +19,22 @@
     <ion-content padding="false" style="top:0px !important;" id="party" class="side-menu-left side-menu-gradient">
       <div class="spacer" style="width: 268px; height: 46px;"></div>
       <div class="profile-image">
-        <img src="img/L5qYY0PZQouwGFDjVXWY_IMG_2931.JPG" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
+        <img src="img/blankprofile.png" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
       </div>
-      <h3 id="menu-heading1" style="color:#FF94FF;font-weight:300;text-align:center;">{{userData.username}}</h3>
+      <h3 id="menu-heading1">{{userData.username}}</h3>
       <div class="spacer" style="width: 268px; height: 43px;"></div>
       <ion-list id="menu-list1">
-        <ion-item class="item-icon-left side-menu-item" id="menu-list-item1" ui-sref="menu.user()" menu-close="" active-page-highlight="">
-          <i class="icon ion-android-person"></i>User</ion-item>
         <ion-item class="item-icon-left side-menu-item" id="menu-list-item2" ui-sref="menu.allDreams()" menu-close="" active-page-highlight="">
           <i class="icon ion-ios-cloudy-night"></i>All Dreams</ion-item>
-        <ion-item class="item-icon-left side-menu-item" id="menu-list-item3" ui-sref="menu.calendar()" menu-close="" active-page-highlight="">
-          <i class="icon ion-calendar"></i>Calendar</ion-item>
+        <!-- <ion-item class="item-icon-left side-menu-item" id="menu-list-item3" ui-sref="menu.calendar()" menu-close="" active-page-highlight="">
+          <i class="icon ion-calendar"></i>Calendar</ion-item> -->
         <ion-item class="item-icon-left side-menu-item" id="menu-list-item4" ui-sref="menu.symbolism()" menu-close="" active-page-highlight="">
           <i class="icon ion-ios-flower"></i>Symbolism Search</ion-item>
-        <ion-item class="item-icon-left side-menu-item" id="menu-list-item5" ui-sref="menu.lucid()" menu-close="" active-page-highlight="">
-          <i class="icon ion-ios-search"></i>Lucid Resource</ion-item>
-        <ion-item id="menu-list-item6" ng-click="logout()" active-page-highlight="" class="side-menu-item">Logout</ion-item>
+        <!-- <ion-item class="item-icon-left side-menu-item" id="menu-list-item5" ui-sref="menu.lucid()" menu-close="" active-page-highlight="">
+          <i class="icon ion-ios-search"></i>Lucid Resource</ion-item> -->
+          <ion-item class="item-icon-left side-menu-item" id="menu-list-item1" ui-sref="menu.user()" menu-close="" active-page-highlight="">
+            <i class="icon ion-android-person"></i>User</ion-item>
+        <ion-item id="menu-list-item6" ng-click="logout()" active-page-highlight="" class="item-icon-left side-menu-item"><i class="icon ion-log-out"></i>Log Out</ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
