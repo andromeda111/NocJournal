@@ -3,7 +3,7 @@
   "app_id": "a617a746",
   "type": "ionic1",
   "gulpStartupTasks": [
-    "sass",
+    "css",
     "watch"
   ]
 }
