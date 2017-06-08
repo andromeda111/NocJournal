@@ -1,8 +1,5 @@
 angular.module('app.controllers', [])
 
-// The following are the constructor functions for each page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for these functions
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
 
 .controller('symbolismCtrl', ['$scope', '$http', '$stateParams', '$state',
 function ($scope, $http, $stateParams, $state) {
@@ -18,7 +15,6 @@ function ($scope, $http, $stateParams, $state) {
   }
 
   $scope.showTheme = function (theme) {
-    console.log(theme)
     $state.go('menu.showSymbol', {id: theme.id})
   }
 
@@ -30,20 +26,5 @@ function ($scope, $stateParams, $http) {
   $scope.theme = {}
   $http.get(`${symbolApi}/${$stateParams.id}`).then(theme => {
     $scope.theme = theme.data[0]
-    console.log($scope.theme)
   })
-
-}])
-//////////////////// RESOURCES AND USER STUFF BELOW ///////////////////////////////////////
-
-.controller('calendarCtrl', ['$scope', '$stateParams',
-function ($scope, $stateParams) {
-
-}])
-
-
-
-.controller('editDreamsCtrl', ['$scope', '$stateParams',
-function ($scope, $stateParams) {
-
 }])
