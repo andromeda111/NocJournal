@@ -29,20 +29,32 @@ Explore the symbols that you may encounter in your dreams.
 
 ##What to Install 
 
+-Node.js
+-PostgreSQL
+-ExpressJS
+-Knex.js
+-Ionic Creator 
+-Angular 
+-Javascript
 
+## Future Development 
 
-ity is installed:
-```bash
-$ npm install -g ionic
-```
+- Having Calendar & archiving dreams in the menu. IE: A calendar will mark the days you had dreams. 
 
-Then run: 
+- Lucid Dreaming Resources: Have a resource to inform users how to experience lucid dreamining & how to train yourself to control the dream efficently. 
 
-```bash
-$ ionic start myProject tabs
-```
+- Facebook integration: Use ionic "passport" so users can log in/sign up with their facebook login. 
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
+## Our Project 
 
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+< link to app here> 
+
+Created By:
+
+John Seymour: https://github.com/andromeda111
+
+Alyssa Evans: https://github.com/missalyss
+
+Amalia Fergin: https://github.com/amaliaclaire
+
+Stefan Baatz: https://github.com/Baatzy
