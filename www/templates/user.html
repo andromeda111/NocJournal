@@ -1,18 +1,21 @@
 <ion-view title="User" id="page1">
   <ion-content padding="true" class="has-header">
     <h1>Dream Stats</h1>
-    <p>Total number of nightmares:</p>
-    <p>Dream emotion occurences:</p>
-    <table>
+    <p>Total number of nightmares: {{all.nightmareCounter}}</p>
+    <p>Total number of recurring dreams: {{all.recurringCounter}}</p>
+
+<!-- <p>{{all.emotionCounter.confused}}</p> -->
+    <table>Dream emotion occurences:
       <tr>
         <th>Emotions</th>
         <th>Occurences</th>
       </tr>
-      <tr>
+      <tr ng-repeat="dream in all">
         <td>{{dream.emotion}}</td>
-        <td>{{dream.emotion.occurences}}</td>
+        <td>{{dream.emotionCounter}}</td>
       </tr>
     </table>
+    <p >{{dream.emotion}}</p>
 
   </ion-content>
 </ion-view>
