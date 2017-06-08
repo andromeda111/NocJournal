@@ -1,3 +1,18 @@
 <ion-view title="User" id="page1">
-  <ion-content padding="true" class="has-header"></ion-content>
+  <ion-content padding="true" class="has-header">
+    <h1>Dream Stats</h1>
+    <p>Total number of nightmares:</p>
+    <p>Dream emotion occurences:</p>
+    <table>
+      <tr>
+        <th>Emotions</th>
+        <th>Occurences</th>
+      </tr>
+      <tr>
+        <td>{{dream.emotion}}</td>
+        <td>{{dream.emotion.occurences}}</td>
+      </tr>
+    </table>
+
+  </ion-content>
 </ion-view>

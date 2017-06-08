@@ -4,18 +4,7 @@ angular.module('app.controllers', [])
 // You can include any angular dependencies as parameters for these functions
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 
-
-
-
-
-
-
-////////////////////RESOURCES AND USER STUFF BELOW ///////////////////////////////////////
-
-.controller('userCtrl', ['$scope', '$stateParams',
-function ($scope, $stateParams) {
-
-}])
+//////////////////// RESOURCES AND USER STUFF BELOW ///////////////////////////////////////
 
 .controller('calendarCtrl', ['$scope', '$stateParams',
 function ($scope, $stateParams) {

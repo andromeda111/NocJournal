@@ -47,8 +47,6 @@ angular.module('app.routes', [])
     }
   })
 
-
-
   .state('menu', {
     url: '/auth',
     templateUrl: 'templates/menu.html',
