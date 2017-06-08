@@ -7,6 +7,13 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+    .state('menu', {
+      cache: false,
+      url: '/auth',
+      templateUrl: 'templates/menu.html',
+      controller: 'menuCtrl'
+    })
+
     .state('menu.allDreams', {
       url: '/all-dreams',
       views: {
@@ -47,12 +54,6 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu', {
-    url: '/auth',
-    templateUrl: 'templates/menu.html',
-    controller: 'menuCtrl'
-  })
-
   .state('menu.user', {
     url: '/user',
     views: {
@@ -85,7 +86,7 @@ angular.module('app.routes', [])
       }
     })
 
-  .state('menu.symbol', {
+  .state('menu.symbolism', {
     url: '/symbolism',
     views: {
       'auth': {
