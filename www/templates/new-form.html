@@ -5,9 +5,14 @@
         <span class="input-label">Date</span>
         <input ng-model="newDream.dream_date" type="date" required>
       </label>
+      <div style="height: 8px;"></div>
 
-      <label class="item item-floating-label item-input" name="body">
-      <textarea rows="8" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
+      <label ng-if="!postDreamError" class="item item-floating-label item-input" name="body">
+      <textarea ng-if="!postDreamError" rows="8" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
+
+      <!-- Swaps in if dream body is empty on submit -->
+      <label style="border-color:red;border-width:1px" ng-if="postDreamError" class="item item-floating-label item-input" name="body">
+      <textarea ng-if="postDreamError"  rows="8" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
 
       <div style="height: 7px;"></div>
       <!-- Ready to record button -->
@@ -70,8 +75,14 @@
         </select>
       </label>
     <div style="height: 7px;"></div>
+
     <button type="submit" ng-click="createDream(newDream)" class="button button-positive button-balanced" style="width: 100%;">Save</button>
     <div style="height: 7px;"></div>
+
+    <div id="dream-error" ng-if="postDreamError" class="show-list-numbers-and-dots">
+      <p style="color:#FF0000;font-size:20px;text-align:center;">{{postDreamError}}</p>
+    </div>
+
   </form>
   </ion-content>
 </ion-view>

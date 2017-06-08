@@ -5,7 +5,6 @@ angular.module('app.post', [])
     const user = $ionicUser.details.username
     const apiUrl = 'https://dream-frog.herokuapp.com'
 
-
     $scope.newDream = {}
     $scope.newDream.dream_date = new Date()
     $scope.newDream.lucidity = 0
@@ -13,6 +12,15 @@ angular.module('app.post', [])
     $scope.newDream.recurring = false
 
     $scope.createDream = function (newDream) {
+      $scope.postDreamError = ''
+      const body = newDream.body
+      const emotion = newDream.emotion
+
+      if (!body) {
+        $scope.postDreamError = 'Please describe your dream'
+        return
+      }
+
       $http.post(`${apiUrl}/${user}/`, newDream).then(result => {
         $state.go('menu.allDreams')
       })
