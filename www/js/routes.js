@@ -96,12 +96,12 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.lucid', {
-    url: '/lucid',
+  .state('menu.showSymbol', {
+    url: '/symbol/show/{id}',
     views: {
       'auth': {
-        templateUrl: 'templates/lucid.html',
-        controller: 'lucidCtrl'
+        templateUrl: 'templates/show-symbol.html',
+        controller: 'showSymbolCtrl'
       }
     }
   })
