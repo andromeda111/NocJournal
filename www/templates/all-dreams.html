@@ -1,6 +1,13 @@
-<ion-view title="All Dreams" id="page2" cache-view="false">
+<!-- <ion-nav-buttons side="left">
+  <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+</ion-nav-buttons> -->
+<!-- hide-back-button="true" -->
+<ion-view title="All Dreams" id="page2" cache-view="false" ng-show="$root.showMenuIcon">
   <ion-content padding="true" style="background: url(img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="has-header">
-    <div id="showDream-container1" ng-repeat="dream in userDreamsAll">
+    <input ng-model="searchDream.$" type="search" class="form-control input-sm search-form" placeholder="Search Dream Content">
+    <div class="spacer" style="width: 300px; height: 10px;"></div>
+
+    <div id="showDream-container1" ng-repeat="dream in userDreamsAll | filter:searchDream | orderBy:'-dream_date'">
       <ion-list id="showDream-list7">
         <ion-item ng-click="showDream(dream)" class="item-avatar transparent" id="showDream-list-item7" style="border-radius: 8px;">
           <h2>{{dream.dream_date | date:'EEE, MMMM dd yyyy'}}</h2>

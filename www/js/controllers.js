@@ -17,9 +17,10 @@ function ($scope, $http, $stateParams) {
     })
   }
 
-  // $scope.getOneSymbol = function () {
-  //   $http.get(`${symbolApi}/`)
-  // }
+  $scope.showTheme = function (theme) {
+    console.log(theme);
+    $http.get(`${symbolApi}/${theme.id}`)
+  }
 
 }])
 
