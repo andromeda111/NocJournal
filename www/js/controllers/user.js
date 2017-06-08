@@ -19,11 +19,74 @@ angular.module('app.user', [])
         })
         $scope.userDreamsAll = dreamArrTemp
         setupChart($scope.userDreamsAll)
+
+        $scope.totalDreams = $scope.userDreamsAll.length
       })
     }
 
     function setupChart (dreamData) {
       console.log(dreamData);
+      let numAfraid = 0;
+      let numAngry = 0;
+      let numAnxious = 0;
+      let numAroused = 0;
+      let numConfused = 0;
+      let numFrustrated = 0;
+      let numHappy = 0;
+      let numIndifferent = 0;
+      let numSad = 0;
+      let numSilly = 0;
+      $scope.lucidityCount = 0;
+      $scope.avgLucidity = 0;
+      $scope.numNightmare = 0;
+      $scope.numRecurring = 0;
+
+      dreamData.forEach(obj => {
+        switch (obj['emotion']) {
+          case 'afraid':
+            numAfraid++
+            break;
+          case 'angry':
+            numAngry++
+            break;
+          case 'anxious':
+            numAnxious++
+            break;
+          case 'aroused':
+            numAroused++
+            break;
+          case 'confused':
+            numConfused++
+            break;
+          case 'frustrated':
+            numFrustrated++
+            break;
+          case 'happy':
+            numHappy++
+            break;
+          case 'indifferent':
+            numIndifferent++
+            break;
+          case 'sad':
+            numSad++
+            break;
+          case 'silly':
+            numSilly++
+            break;
+          default:
+            break;
+        }
+
+      $scope.lucidityCount += obj['lucidity']
+      if (obj['nightmare']) {
+        $scope.numNightmare++
+      }
+      if (obj['recurring']) {
+        $scope.numRecurring++
+      }
+      })
+      $scope.avgLucidity = $scope.lucidityCount / dreamData.length
+      $scope.avgNightmares = ($scope.numNightmare / dreamData.length) * 100
 
       $scope.chartObject = {};
 
@@ -37,61 +100,61 @@ angular.module('app.user', [])
               {
                   c: [
                      { v: "Afraid" },
-                     { v: 1 },
+                     { v: numAfraid },
                   ]
               },
               {
                   c: [
                      { v: "Angry" },
-                     { v: 2 }
+                     { v: numAngry }
                   ]
               },
               {
                   c: [
                      { v: "Anxious" },
-                     { v: 3 },
+                     { v: numAnxious },
                   ]
               },
               {
                   c: [
                      { v: "Aroused" },
-                     { v: 1 },
+                     { v: numAroused },
                   ]
               },
               {
                   c: [
                      { v: "Confused" },
-                     { v: 1 },
+                     { v: numConfused },
                   ]
               },
               {
                   c: [
                      { v: "Frustrated" },
-                     { v: 1 },
+                     { v: numFrustrated },
                   ]
               },
               {
                   c: [
                      { v: "Happy" },
-                     { v: 6 }
+                     { v: numHappy }
                   ]
               },
               {
                   c: [
                      { v: "Indifferent" },
-                     { v: 5 },
+                     { v: numIndifferent },
                   ]
               },
               {
                   c: [
                      { v: "Sad" },
-                     { v: 1 },
+                     { v: numSad },
                   ]
               },
               {
                   c: [
                      { v: "Silly" },
-                     { v: 7 },
+                     { v: numSilly },
                   ]
               }
           ]
@@ -99,8 +162,9 @@ angular.module('app.user', [])
 
   $scope.chartObject.options = {
       'legend':'bottom',
-      // 'title':'Dream History Analysis',
-      'is3D':false,
+      'title':'Dream Emotions',
+      'is3D':true,
+      'chartArea': {width:"100%",height:"80%"},
       'sliceVisibilityThreshold': 0.1,
       'width':350,
       'height':300,

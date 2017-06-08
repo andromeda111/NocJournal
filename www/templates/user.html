@@ -1,29 +1,48 @@
 <ion-view cache-view="false" title="User" id="page1">
-  <ion-content padding="true" class="has-header">
-    <h1>Dream Stats</h1>
-
-    <div google-chart chart="chartObject" class="chart-container">
-            </div>
+  <ion-content padding="true" style="background: url(img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="has-header">
+<div class="card">
 
 
-    <p>Total number of nightmares: {{all.nightmareCounter}}</p>
-    <ng-pluralize count="all.nightmareCounter" when="{'zero': 'You haven't recorded any nightmares.', 'one': 'You have recorded 1 nightmare.', 'other': 'You have recorded {} nightmares.'}"></ng-pluralize>
+    <h4>Dream Statistics</h4>
 
-    <p>Total number of recurring dreams: {{all.recurringCounter}}</p>
-        <ng-pluralize count="all.recurringCounter" when="{'zero': 'You haven't recorded any recurring dreams.', 'one': 'You have recorded 1 recurring dream.', 'other': 'You have recorded {} recurring dreams.'}"></ng-pluralize>
-
-<!-- <p>{{all.emotionCounter.confused}}</p> -->
-    <table>Dream emotion occurences:
-      <tr>
-        <th>Emotions</th>
-        <th>Occurences</th>
-      </tr>
-      <tr ng-repeat="dream in all">
-        <td>{{dream.emotion}}</td>
-        <td>{{dream.emotionCounter}}</td>
-      </tr>
-    </table>
-    <p >{{dream.emotion}}</p>
-
+    <div google-chart chart="chartObject" class="chart-container"></div>
+</div>
+<div class="card stats">
+    <div class="row">
+      <div class="col cell">
+        <h5>Dreams Recorded:</h5>
+      </div>
+      <div class="col cell">
+         <h5>{{totalDreams}}</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col cell">
+        <h5>Averge Dream Lucidity:</h5>
+      </div>
+      <div class="col cell">
+         <h5>{{avgLucidity}}</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col cell">
+        <h5>Nightmares:</h5>
+      </div>
+      <div class="col cell">
+         <h5>{{numNightmare}}</h5>
+      </div>
+      <div class="col cell">
+         <h5>{{avgNightmares}}%</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col cell">
+        <h5>Recurring Dreams:</h5>
+      </div>
+      <div class="col cell">
+         <h5>{{numRecurring}}</h5>
+      </div>
+    </div>
+</div>
   </ion-content>
 </ion-view>
