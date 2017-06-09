@@ -7,6 +7,20 @@
     <input ng-model="searchDream.$" type="search" class="form-control input-sm search-form" placeholder="  Search Dream Content" style="width: 100%; border-radius: 25px;">
     <div class="spacer" style="width: 300px; height: 10px;"></div>
 
+    <!-- This tutorial window hides when dreams are present -->
+    <div ng-if="showTutorial">
+      <div class="transparent card" style="border-radius:8px;">
+        <ion-item >
+          <h2>Welcome to your Nocjournal</h2>
+        </ion-item>
+        <ion-item class="item-text-wrap">
+          <p>To get started, add a dream using the plus button at the top right of the screen. Adding dreams to Nocjournal allows you to start analyzing their content using the User pane in the side menu.
+          <br/><br/>
+          Have fun and sleep tight!</p>
+        </ion-item>
+      </div>
+    </div>
+
     <div id="showDream-container1" ng-repeat="dream in userDreamsAll | filter:searchDream | orderBy:'-dream_date'">
       <ion-list id="showDream-list7">
         <ion-item ng-click="showDream(dream)" class="item-avatar transparent" id="showDream-list-item7" style="border-radius: 8px;">
@@ -17,6 +31,7 @@
         </ion-item>
       </ion-list>
       <div class="spacer" style="width: 300px; height: 10px;"></div>
+
     </div>
   </ion-content>
 </ion-view>

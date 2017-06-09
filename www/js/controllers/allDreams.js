@@ -4,6 +4,7 @@ angular.module('app.allDreams', [])
     function ($scope, $stateParams, $ionicUser, $http, $state) {
       const apiUrl = 'https://dream-frog.herokuapp.com'
       $scope.userDreamsAll = []
+      $scope.showTutorial = true
 
       getUserDreams()
 
@@ -16,6 +17,14 @@ angular.module('app.allDreams', [])
             }
           })
           $scope.userDreamsAll = dreamArrTemp
+
+          if ($scope.userDreamsAll.length > 0) {
+            $scope.showTutorial = false
+          }
+
+          if ($scope.userDreamsAll.length === 0) {
+            $scope.showTutorial = true
+          }
         })
       }
 
