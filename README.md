@@ -30,14 +30,7 @@ This graph highlights the average emotion the user has experienced throughout th
 
 
 ## What to Install 
-
--Node.js
--PostgreSQL
--ExpressJS
--Knex.js
--Ionic Creator 
--Angular 
--Javascript
+< add to install here> 
 
 ## Future Development 
 
