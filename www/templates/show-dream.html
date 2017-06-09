@@ -1,29 +1,29 @@
-<ion-view cache-view="false">
+<ion-view cache-view="false" title="Dream {{dream.dream_date | date:' EEEE, MMMM dd, yyyy'}}">
   <ion-content padding="true" class="has-header">
-      <h3 class="white" style="text-align: center;">{{dream.dream_date | date:' EEEE, MMMM dd, yyyy'}}</h3>
-    <h4 class="white">Dream:</h4>
-    <div class="show-list-numbers-and-dots white">
+      <h3 class="clear" style="text-align: center; color: white">{{dream.dream_date | date:' EEEE, MMMM dd, yyyy'}}</h3>
+    <div class="show-list-numbers-and-dots white transparent">
+      <h4 class="white">Dream:</h4>
       <p>{{dream.body}}</p>
     </div>
-    <h4 class="white">Interpretation:</h4>
-    <div class="show-list-numbers-and-dots white">
+    <div class="spacer" style="width: 290px; height: 15px;"></div>
+    <div class="show-list-numbers-and-dots white transparent">
+      <h4 class="white">Interpretation:</h4>
       <p>{{dream.interpretation}}</p>
     </div>
-    <br>
+    <div class="spacer" style="width: 290px; height: 15px;"></div>
     <ion-list>
-      <ion-item class="item-icon-left">
+      <ion-item class="item-icon-left transparent" style="border-radius: 8px 8px 0px 0px">
         <i class="icon ion-ios-eye"></i>Lucidity: {{dream.lucidity}}</ion-item>
-      <ion-item class="item-icon-left">
+      <ion-item class="item-icon-left transparent">
         <i class="icon ion-social-freebsd-devil"></i>Nightmare: {{dream.nightmare}}</ion-item>
-      <ion-item class="item-icon-left">
+      <ion-item class="item-icon-left transparent">
         <i class="icon ion-reply-all"></i>Reoccurring: {{dream.recurring}}</ion-item>
-      <ion-item class="item-icon-left">
+      <ion-item class="item-icon-left transparent" style="border-radius: 0px 0px 8px 8px">
         <i class="icon ion-heart-broken"></i>Emotion: {{dream.emotion}}</ion-item>
     </ion-list>
 
-    <div style="height: 7px;"></div>
+    <div class="spacer" style="width: 290px; height: 15px;"></div>
     <button ng-click="editDream(dream)" class="button button-royal" type="button" name="button" style="width: 100%;">Edit</button>
-    <div style="height: 7px;"></div>
 
   </ion-content>
 </ion-view>

@@ -1,20 +1,19 @@
 <ion-view view-title="New Dream">
   <ion-content padding="true" class="has-header">
     <form name="newDreamForm" class="list">
-      <label class="item item-input">
+      <label class="item item-input transparent">
         <span class="input-label">Date</span>
         <input ng-model="newDream.dream_date" type="date" required>
       </label>
-      <div style="height: 8px;"></div>
-
-      <label ng-if="!postDreamError" class="item item-floating-label item-input" name="body">
-      <textarea ng-if="!postDreamError" rows="8" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
+      <label ng-if="!postDreamError" class="item item-floating-label item-input transparent" name="body">
+      <textarea ng-if="!postDreamError" rows="6" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
 
       <!-- Swaps in if dream body is empty on submit -->
-      <label style="border-color:red;border-width:1px" ng-if="postDreamError" class="item item-floating-label item-input" name="body">
-      <textarea ng-if="postDreamError"  rows="8" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
+      <label style="border-color:red;border-width:1px" ng-if="postDreamError" class="item item-floating-label item-input transparent" name="body">
+      <textarea ng-if="postDreamError"  rows="6" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
 
-      <div style="height: 7px;"></div>
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
       <!-- Ready to record button -->
       <button ng-if="recordButton" class="button button-royal" ng-click="record()" type="button" name="button" style="width:100%;">
         <i class="icon ion-mic-a"></i> Record
@@ -23,13 +22,14 @@
       <button ng-if="!recordButton" class="button button-assertive" type="button" name="button" style="width:100%;">
         <i class="icon ion-mic-a"></i> Listening
       </button>
-      <div style="height: 7px;"></div>
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
 
-      <label class="item item-input" name="interpretation">
+      <label class="item item-input transparent" name="interpretation">
         <textarea rows="4" placeholder="Self Interpretation" ng-model="newDream.interpretation"></textarea></label>
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
+      <div class="item range transparent">
+        <span class="input-label">Lucidity<span ng-model="newDream.lucidity" class="lucid-meter">{{newDream.lucidity}}</span></span>
 
-      <div class="item range">
-        <span class="input-label">Lucidity</span>
         <i class="icon ion-ios-cloudy-night-outline"></i>
         <input type="range" min="0" max="10" step="1" name="lucidity" ng-model="newDream.lucidity">
         <i class="icon ion-ios-moon-outline"></i>
@@ -37,7 +37,7 @@
 
 
       <ul>
-        <li class="item item-toggle">Nightmare
+        <li class="item item-toggle transparent">Nightmare
           <label class="toggle toggle-assertive">
             <input ng-model="newDream.nightmare" type="checkbox" name="nightmare">
             <div class="track">
@@ -46,7 +46,7 @@
           </label>
         </li>
 
-        <li class="item item-toggle">Recurring
+        <li class="item item-toggle transparent">Recurring
           <label class="toggle toggle-balanced">
             <input ng-model="newDream.recurring" type="checkbox" name="recurring">
             <div class="track">
@@ -57,7 +57,7 @@
       </ul>
 
 
-      <label class="item item-select" name="emotion">
+      <label class="item item-select transparent" name="emotion">
         <span class="input-label">Emotion</span>
         <select ng-model="newDream.emotion">
           <option default value="">How did you feel?</option>
@@ -74,13 +74,13 @@
           <option value="silly">Silly</option>
         </select>
       </label>
-    <div style="height: 7px;"></div>
+    <div class="spacer" style="width: 290px; height: 10px;"></div>
 
     <button type="submit" ng-click="createDream(newDream)" class="button button-positive button-balanced" style="width: 100%;">Save</button>
-    <div style="height: 7px;"></div>
+    <div class="spacer" style="width: 290px; height: 5px;"></div>
 
     <div id="dream-error" ng-if="postDreamError" class="show-list-numbers-and-dots">
-      <p style="color:#FF0000;font-size:20px;text-align:center;">{{postDreamError}}</p>
+      <p style="color:#FF0000;font-size:18px;text-align:center;">{{postDreamError}}</p>
     </div>
 
   </form>

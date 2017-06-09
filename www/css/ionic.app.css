@@ -7694,7 +7694,7 @@ textarea {
 
 .item-floating-label {
   display: block;
-  background-color: transparent;
+  /*background-color: transparent;*/
   box-shadow: none; }
   .item-floating-label .input-label {
     position: relative;

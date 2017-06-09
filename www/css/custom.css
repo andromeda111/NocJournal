@@ -72,3 +72,8 @@ ion-view {
   margin-left: 2%;
   text-align: center;
 }
+
+.lucid-meter {
+  position: relative;
+  margin-left: 30px;
+}
