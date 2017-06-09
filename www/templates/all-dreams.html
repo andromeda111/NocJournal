@@ -4,7 +4,7 @@
 <!-- hide-back-button="true" -->
 <ion-view title="All Dreams" id="page2" cache-view="false">
   <ion-content padding="true" style="background: url(img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="has-header">
-    <input ng-model="searchDream.$" type="search" class="form-control input-sm search-form" placeholder="  Search Dream Content" style="width: 100%; border-radius: 4px;">
+    <input ng-model="searchDream.$" type="search" class="form-control input-sm search-form" placeholder="  Search Dream Content" style="width: 100%; border-radius: 25px;">
     <div class="spacer" style="width: 300px; height: 10px;"></div>
 
     <div id="showDream-container1" ng-repeat="dream in userDreamsAll | filter:searchDream | orderBy:'-dream_date'">
