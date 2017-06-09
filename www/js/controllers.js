@@ -10,6 +10,7 @@ function ($scope, $http, $stateParams, $state) {
 
   function getAllSymbols () {
     $http.get(symbolApi).then(allSymbols => {
+      console.log(allSymbols);
       $scope.symbols = allSymbols.data
     })
   }
