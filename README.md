@@ -21,13 +21,15 @@ Explore the symbols that you may encounter in your dreams.
 ![sceren shot of symbols](https://user-images.githubusercontent.com/24262724/26952907-588a0b30-4c5c-11e7-821d-aa253698616f.png)
 
 
-****** PUT GRAPH OF DREAMS HERE.****
+## Graph of Dreams 
 
-![screennshot of graph]
+This graph highlights the average emotion the user has experienced throughout their dream documentation. 
+
+![screennshot of graph](https://user-images.githubusercontent.com/24262724/26986194-4aa33e5c-4cfb-11e7-9d15-e9234bde6318.png)
 
 
 
-##What to Install 
+## What to Install 
 
 -Node.js
 -PostgreSQL
