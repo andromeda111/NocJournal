@@ -88,6 +88,9 @@ angular.module('app.user', [])
       $scope.avgLucidity = ($scope.lucidityCount / dreamData.length) * 10
       $scope.avgNightmares = ($scope.numNightmare / dreamData.length) * 100
       $scope.avgRecurring = ($scope.numRecurring / dreamData.length) * 100
+      $scope.avgLucidity = $scope.avgLucidity.toFixed()
+      $scope.avgNightmares = $scope.avgNightmares.toFixed()
+      $scope.avgRecurring = $scope.avgRecurring.toFixed()
 
       $scope.chartObject = {};
 
