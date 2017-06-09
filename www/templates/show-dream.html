@@ -1,14 +1,15 @@
 <ion-view cache-view="false">
   <ion-content padding="true" class="has-header">
-      <h3 style="text-align: center;">{{dream.dream_date | date:' EEEE, MMMM dd, yyyy'}}</h3>
-    <h4>Dream:</h4>
-    <div class="show-list-numbers-and-dots">
+      <h3 class="white" style="text-align: center;">{{dream.dream_date | date:' EEEE, MMMM dd, yyyy'}}</h3>
+    <h4 class="white">Dream:</h4>
+    <div class="show-list-numbers-and-dots white">
       <p>{{dream.body}}</p>
     </div>
-    <h4>Interpretation:</h4>
-    <div class="show-list-numbers-and-dots">
+    <h4 class="white">Interpretation:</h4>
+    <div class="show-list-numbers-and-dots white">
       <p>{{dream.interpretation}}</p>
     </div>
+    <br>
     <ion-list>
       <ion-item class="item-icon-left">
         <i class="icon ion-ios-eye"></i>Lucidity: {{dream.lucidity}}</ion-item>

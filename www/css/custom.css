@@ -1,6 +1,12 @@
-.ion-view {
-  background: url(img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;
+ion-view {
+  background: url(../img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;
   background-size:cover;
+}
+
+.white {
+  background-color: white;
+  border-radius: 4px;
+  padding: 6px;
 }
 
 .side-menu-item {
