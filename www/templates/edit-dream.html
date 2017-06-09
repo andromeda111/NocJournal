@@ -1,21 +1,21 @@
 <ion-view view-title="Edit This Dream">
   <ion-content padding="true" class="has-header">
     <form name="newDreamForm" class="list">
-      <label class="item item-input">
+      <label class="item item-input transparent" style="border-radius: 8px 8px 8px 8px">
         <span class="input-label">Date</span>
         <input ng-model="updateDream.dream_date" type="date" required>
       </label>
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
+      <label class="item item-floating-label item-input transparent" name="body" style="border-radius: 8px 8px 8px 8px">
+      <textarea rows="6" placeholder="Describe your dream" ng-model="updateDream.body" required ></textarea></label>
 
-      <label class="item item-floating-label item-input" name="body">
-      <textarea rows="8" placeholder="Describe your dream" ng-model="updateDream.body" required ></textarea></label>
-
-      <br>
-
-      <label class="item item-input" name="interpretation">
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
+      <label class="item item-input transparent" name="interpretation" style="border-radius: 8px 8px 8px 8px">
         <textarea rows="4" placeholder="Self Interpretation" ng-model="updateDream.interpretation"></textarea></label>
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
 
-      <div class="item range">
-        <span class="input-label">Lucidity</span>
+      <div class="item range transparent" style="border-radius: 8px 8px 0px 0px">
+        <span class="input-label">Lucidity<span ng-model="updateDream.lucidity" class="lucid-meter">{{updateDream.lucidity}}</span></span>
         <i class="icon ion-ios-cloudy-night-outline"></i>
         <input type="range" min="0" max="10" step="1" name="lucidity" ng-model="updateDream.lucidity">
         <i class="icon ion-ios-moon-outline"></i>
@@ -23,7 +23,7 @@
 
 
       <ul>
-        <li class="item item-toggle">Nightmare
+        <li class="item item-toggle transparent">Nightmare
           <label class="toggle toggle-assertive">
             <input ng-model="updateDream.nightmare" type="checkbox" name="nightmare">
             <div class="track">
@@ -32,7 +32,7 @@
           </label>
         </li>
 
-        <li class="item item-toggle">Recurring
+        <li class="item item-toggle transparent">Recurring
           <label class="toggle toggle-balanced">
             <input ng-model="updateDream.recurring" type="checkbox" name="recurring">
             <div class="track">
@@ -43,7 +43,7 @@
       </ul>
 
 
-      <label class="item item-select" name="emotion">
+      <label class="item item-select transparent" name="emotion" style="border-radius: 0px 0px 8px 8px">
         <span class="input-label">Emotion</span>
         <select ng-model="updateDream.emotion">
           <option default value="">How did you feel?</option>
@@ -60,9 +60,8 @@
           <option value="aroused">Aroused</option>
         </select>
       </label>
-    <div style="height: 7px;"></div>
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
     <button nav-direction="back" type="submit" ng-click="editDream(updateDream)" class="button button-positive button-balanced" style="width: 100%;">Save</button>
-    <div style="height: 7px;"></div>
   </form>
   </ion-content>
 </ion-view>

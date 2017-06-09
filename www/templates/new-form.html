@@ -1,16 +1,16 @@
 <ion-view view-title="New Dream">
   <ion-content padding="true" class="has-header">
     <form name="newDreamForm" class="list">
-      <label class="item item-input transparent">
+      <label class="item item-input transparent" style="border-radius: 8px 8px 8px 8px">
         <span class="input-label">Date</span>
         <input ng-model="newDream.dream_date" type="date" required>
       </label>
       <div class="spacer" style="width: 290px; height: 10px;"></div>
-      <label ng-if="!postDreamError" class="item item-floating-label item-input transparent" name="body">
+      <label ng-if="!postDreamError" class="item item-floating-label item-input transparent" name="body" style="border-radius: 8px 8px 8px 8px">
       <textarea ng-if="!postDreamError" rows="6" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
 
       <!-- Swaps in if dream body is empty on submit -->
-      <label style="border-color:red;border-width:1px" ng-if="postDreamError" class="item item-floating-label item-input transparent" name="body">
+      <label style="border-color:red;border-width:1px; border-radius: 8px 8px 8px 8px" ng-if="postDreamError" class="item item-floating-label item-input transparent" name="body">
       <textarea ng-if="postDreamError"  rows="6" placeholder="Describe your dream" ng-model="newDream.body" required ></textarea></label>
 
       <div class="spacer" style="width: 290px; height: 10px;"></div>
@@ -24,10 +24,10 @@
       </button>
       <div class="spacer" style="width: 290px; height: 10px;"></div>
 
-      <label class="item item-input transparent" name="interpretation">
+      <label class="item item-input transparent" name="interpretation" style="border-radius: 8px 8px 8px 8px">
         <textarea rows="4" placeholder="Self Interpretation" ng-model="newDream.interpretation"></textarea></label>
       <div class="spacer" style="width: 290px; height: 10px;"></div>
-      <div class="item range transparent">
+      <div class="item range transparent" style="border-radius: 8px 8px 0px 0px">
         <span class="input-label">Lucidity<span ng-model="newDream.lucidity" class="lucid-meter">{{newDream.lucidity}}</span></span>
 
         <i class="icon ion-ios-cloudy-night-outline"></i>
@@ -57,7 +57,7 @@
       </ul>
 
 
-      <label class="item item-select transparent" name="emotion">
+      <label class="item item-select transparent" name="emotion" style="border-radius: 0px 0px 8px 8px">
         <span class="input-label">Emotion</span>
         <select ng-model="newDream.emotion">
           <option default value="">How did you feel?</option>
