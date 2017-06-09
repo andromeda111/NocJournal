@@ -31,6 +31,7 @@ angular.module('app.user', [])
       let numAnxious = 0;
       let numAroused = 0;
       let numConfused = 0;
+      let numExcited = 0;
       let numFrustrated = 0;
       let numHappy = 0;
       let numIndifferent = 0;
@@ -58,6 +59,9 @@ angular.module('app.user', [])
           case 'confused':
             numConfused++
             break;
+          case 'excited':
+            numExcited++
+            break;
           case 'frustrated':
             numFrustrated++
             break;
@@ -84,6 +88,7 @@ angular.module('app.user', [])
       if (obj['recurring']) {
         $scope.numRecurring++
       }
+      console.log(obj['emotion']);
       })
       $scope.avgLucidity = ($scope.lucidityCount / dreamData.length) * 10
       $scope.avgNightmares = ($scope.numNightmare / dreamData.length) * 100
@@ -133,6 +138,12 @@ angular.module('app.user', [])
               },
               {
                   c: [
+                     { v: "Excited" },
+                     { v: numExcited },
+                  ]
+              },
+              {
+                  c: [
                      { v: "Frustrated" },
                      { v: numFrustrated },
                   ]
@@ -178,29 +189,5 @@ angular.module('app.user', [])
       'colors': ['#182033', '#273453', '#34466F', '#41578B', '#4E69A6', '#667FB7', '#8296C4', '#9EADD1', '#BAC5DE', '#D5DCEB']
   };
 }
-
-
-
-//     $scope.all = []
-//     getStats()
-//
-//     function getStats () {
-//       $http.get(`${apiUrl}/${user}/`).then(result => {
-//         $scope.all = result.data
-//         $scope.all.nightmareCounter = 0
-//         $scope.all.recurringCounter = 0
-//
-//         $scope.all.emotionCounter = {confused: 5, excited: 0 }
-//         // console.log($scope.all.emotionCounter.confused)
-// // consider turning the counter into a map, ++ to each item in the array
-//         $scope.all.forEach(dream => {
-//           dream.nightmare ? $scope.all.nightmareCounter++ : $scope.all.nightmareCounter
-//           dream.recurring ? $scope.all.recurringCounter++ : $scope.all.recurringCounter
-//           // dream.emotion ? $scope.all.emotionCounter.confused ++ : $scope.all.emotionCounter.confused
-//         })
-//       })
-//     }
   }
 ])
-
-// afraid, angry, anxious, aroused, confused, frustrated, happy, indifferent, sad, silly

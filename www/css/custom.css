@@ -64,10 +64,11 @@ ion-view {
   border: 1px solid black;
 }
 
-.stats {
-  text-align: center;
-}
-
 .graph-card {
   color: white;
+}
+
+.cell-row {
+  margin-left: 2%;
+  text-align: center;
 }
