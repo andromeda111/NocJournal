@@ -27,6 +27,15 @@ This graph highlights the average emotion the user has experienced throughout th
 
 ![screennshot of graph](https://user-images.githubusercontent.com/24262724/26986194-4aa33e5c-4cfb-11e7-9d15-e9234bde6318.png)
 
+## Technology we used 
+Node.js
+PostgreSQL
+ExpressJS
+Knex.js
+Handlebars
+Bootstrap
+Angular 
+Javascript
 
 
 ## What to Install 
