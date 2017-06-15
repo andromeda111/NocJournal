@@ -18,7 +18,6 @@ function ($scope, $http, $stateParams, $state) {
   $scope.showTheme = function (theme) {
     $state.go('menu.showSymbol', {id: theme.id})
   }
-
 }])
 
 .controller('showSymbolCtrl', ['$scope', '$stateParams', '$http',

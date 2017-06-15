@@ -3,20 +3,19 @@
 </ion-nav-buttons> -->
 <!-- hide-back-button="true" -->
 <ion-view title="All Dreams" id="page2" cache-view="false">
-  <ion-content padding="true" style="background: url(img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="has-header">
+  <ion-content padding="true" style="background: url(img/starfield-bg.jpg) no-repeat center;background-size:cover;" class="has-header">
     <input ng-model="searchDream.$" type="search" class="form-control input-sm search-form" placeholder="  Search Dream Content" style="width: 100%; border-radius: 25px;">
     <div class="spacer" style="width: 300px; height: 10px;"></div>
 
     <!-- This tutorial window hides when dreams are present -->
     <div ng-if="showTutorial">
       <div class="transparent card" style="border-radius:8px;">
-        <ion-item >
+        <ion-item>
           <h2>Welcome to your Nocjournal</h2>
         </ion-item>
         <ion-item class="item-text-wrap">
           <p>To get started, add a dream using the plus button at the top right of the screen. Adding dreams to Nocjournal allows you to start analyzing their content using the User pane in the side menu.
-          <br/><br/>
-          Have fun and sleep tight!</p>
+            <br/><br/> Have fun and sleep tight!</p>
         </ion-item>
       </div>
     </div>

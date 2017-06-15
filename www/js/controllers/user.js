@@ -25,70 +25,68 @@ angular.module('app.user', [])
     }
 
     function setupChart (dreamData) {
-      console.log(dreamData);
-      let numAfraid = 0;
-      let numAngry = 0;
-      let numAnxious = 0;
-      let numAroused = 0;
-      let numConfused = 0;
-      let numExcited = 0;
-      let numFrustrated = 0;
-      let numHappy = 0;
-      let numIndifferent = 0;
-      let numSad = 0;
-      let numSilly = 0;
-      $scope.lucidityCount = 0;
-      $scope.avgLucidity = 0;
-      $scope.numNightmare = 0;
-      $scope.numRecurring = 0;
+      let numAfraid = 0
+      let numAngry = 0
+      let numAnxious = 0
+      let numAroused = 0
+      let numConfused = 0
+      let numExcited = 0
+      let numFrustrated = 0
+      let numHappy = 0
+      let numIndifferent = 0
+      let numSad = 0
+      let numSilly = 0
+      $scope.lucidityCount = 0
+      $scope.avgLucidity = 0
+      $scope.numNightmare = 0
+      $scope.numRecurring = 0
 
       dreamData.forEach(obj => {
         switch (obj['emotion']) {
           case 'afraid':
             numAfraid++
-            break;
+            break
           case 'angry':
             numAngry++
-            break;
+            break
           case 'anxious':
             numAnxious++
-            break;
+            break
           case 'aroused':
             numAroused++
-            break;
+            break
           case 'confused':
             numConfused++
-            break;
+            break
           case 'excited':
             numExcited++
-            break;
+            break
           case 'frustrated':
             numFrustrated++
-            break;
+            break
           case 'happy':
             numHappy++
-            break;
+            break
           case 'indifferent':
             numIndifferent++
-            break;
+            break
           case 'sad':
             numSad++
-            break;
+            break
           case 'silly':
             numSilly++
-            break;
+            break
           default:
-            break;
+            break
         }
 
-      $scope.lucidityCount += obj['lucidity']
-      if (obj['nightmare']) {
-        $scope.numNightmare++
-      }
-      if (obj['recurring']) {
-        $scope.numRecurring++
-      }
-      console.log(obj['emotion']);
+        $scope.lucidityCount += obj['lucidity']
+        if (obj['nightmare']) {
+          $scope.numNightmare++
+        }
+        if (obj['recurring']) {
+          $scope.numRecurring++
+        }
       })
       $scope.avgLucidity = ($scope.lucidityCount / dreamData.length) * 10
       $scope.avgNightmares = ($scope.numNightmare / dreamData.length) * 100
@@ -175,19 +173,19 @@ angular.module('app.user', [])
           ]
       };
 
-  $scope.chartObject.options = {
-      'legend':'bottom',
-      'backgroundColor': 'none',
-      'title':'Dream Emotions',
-      'is3D':true,
-      'chartArea': {width:"100%",height:"80%"},
-      'sliceVisibilityThreshold': 0.1,
-      'width':350,
-      'height':300,
-      'legendTextStyle': {color: '#FFF'},
-      'titleTextStyle': {color: '#FFF'},
-      'colors': ['#182033', '#273453', '#34466F', '#41578B', '#4E69A6', '#667FB7', '#8296C4', '#9EADD1', '#BAC5DE', '#D5DCEB']
-  };
-}
+      $scope.chartObject.options = {
+          'legend':'bottom',
+          'backgroundColor': 'none',
+          'title':'Dream Emotions',
+          'is3D':true,
+          'chartArea': {width:"100%",height:"80%"},
+          'sliceVisibilityThreshold': 0.1,
+          'width':350,
+          'height':300,
+          'legendTextStyle': {color: '#FFF'},
+          'titleTextStyle': {color: '#FFF'},
+          'colors': ['#182033', '#273453', '#34466F', '#41578B', '#4E69A6', '#667FB7', '#8296C4', '#9EADD1', '#BAC5DE', '#D5DCEB']
+      };
+    }
   }
 ])

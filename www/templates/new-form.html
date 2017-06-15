@@ -35,7 +35,6 @@
         <i class="icon ion-ios-moon-outline"></i>
       </div>
 
-
       <ul>
         <li class="item item-toggle transparent">Nightmare
           <label class="toggle toggle-assertive">
@@ -56,7 +55,6 @@
         </li>
       </ul>
 
-
       <label class="item item-select transparent" name="emotion" style="border-radius: 0px 0px 8px 8px">
         <span class="input-label">Emotion</span>
         <select ng-model="newDream.emotion">
@@ -74,15 +72,15 @@
           <option value="silly">Silly</option>
         </select>
       </label>
-    <div class="spacer" style="width: 290px; height: 10px;"></div>
+      <div class="spacer" style="width: 290px; height: 10px;"></div>
 
-    <button type="submit" ng-click="createDream(newDream)" class="button button-positive button-balanced" style="width: 100%;">Save</button>
-    <div class="spacer" style="width: 290px; height: 5px;"></div>
+      <button type="submit" ng-click="createDream(newDream)" class="button button-positive button-balanced" style="width: 100%;">Save</button>
+      <div class="spacer" style="width: 290px; height: 5px;"></div>
 
-    <div id="dream-error" ng-if="postDreamError" class="show-list-numbers-and-dots">
-      <p style="color:#FF0000;font-size:18px;text-align:center;">{{postDreamError}}</p>
-    </div>
+      <div id="dream-error" ng-if="postDreamError" class="show-list-numbers-and-dots">
+        <p style="color:#FF0000;font-size:18px;text-align:center;">{{postDreamError}}</p>
+      </div>
 
-  </form>
+    </form>
   </ion-content>
 </ion-view>

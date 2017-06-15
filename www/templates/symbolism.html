@@ -1,7 +1,6 @@
 <ion-view title="Dream Meanings and Symbols" id="page4">
-  <ion-content padding="true" style="background: url(img/UACHEK3RRGGPr0pN5Axf_12223598224_16c2f67a6c_k.jpg) no-repeat center;background-size:cover;" class="has-header">
+  <ion-content padding="true" style="background: url(img/starfield-bg.jpg) no-repeat center;background-size:cover;" class="has-header">
     <input ng-model="searchFilter.symbol" type="search" class="form-control input-sm search-form" placeholder="  Search Symbol" style="width: 100%; border-radius: 25px;">
-
     <div class="spacer" style="width: 300px; height: 10px;"></div>
     <div ng-repeat="theme in symbols | filter:searchFilter | orderBy:'symbol'">
       <ion-list>

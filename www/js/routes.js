@@ -25,8 +25,8 @@ angular.module('app.routes', [])
     })
 
     .state('menu.editDream', {
-      url:'/edit-dream/{id}',
-      views:{
+      url: '/edit-dream/{id}',
+      views: {
         'auth': {
           templateUrl: 'templates/edit-dream.html',
           controller: 'editDreamsCtrl'
@@ -34,47 +34,47 @@ angular.module('app.routes', [])
       }
     })
 
-  .state('menu.showDream', {
-    url: '/show/{id}',
-    views: {
-      'auth': {
-        templateUrl: 'templates/show-dream.html',
-        controller: 'showDreamCtrl'
+    .state('menu.showDream', {
+      url: '/show/{id}',
+      views: {
+        'auth': {
+          templateUrl: 'templates/show-dream.html',
+          controller: 'showDreamCtrl'
+        }
       }
-    }
-  })
+    })
 
-  .state('menu.newForm', {
-    url: '/new',
-    views: {
-      'auth': {
-        templateUrl: 'templates/new-form.html',
-        controller: 'newFormCtrl'
+    .state('menu.newForm', {
+      url: '/new',
+      views: {
+        'auth': {
+          templateUrl: 'templates/new-form.html',
+          controller: 'newFormCtrl'
+        }
       }
-    }
-  })
+    })
 
-  .state('menu.user', {
-    url: '/user',
-    views: {
-      'auth': {
-        templateUrl: 'templates/user.html',
-        controller: 'userCtrl'
+    .state('menu.user', {
+      url: '/user',
+      views: {
+        'auth': {
+          templateUrl: 'templates/user.html',
+          controller: 'userCtrl'
+        }
       }
-    }
-  })
+    })
 
-  .state('login', {
-    url: '/login',
-    templateUrl: 'templates/login.html',
-    controller: 'loginCtrl'
-  })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'loginCtrl'
+    })
 
-  .state('signup', {
-    url: '/signup',
-    templateUrl: 'templates/signup.html',
-    controller: 'signupCtrl'
-  })
+    .state('signup', {
+      url: '/signup',
+      templateUrl: 'templates/signup.html',
+      controller: 'signupCtrl'
+    })
 
     .state('menu.calendar', {
       url: '/calendar',
@@ -86,26 +86,25 @@ angular.module('app.routes', [])
       }
     })
 
-  .state('menu.symbolism', {
-    url: '/symbolism',
-    views: {
-      'auth': {
-        templateUrl: 'templates/symbolism.html',
-        controller: 'symbolismCtrl'
+    .state('menu.symbolism', {
+      url: '/symbolism',
+      views: {
+        'auth': {
+          templateUrl: 'templates/symbolism.html',
+          controller: 'symbolismCtrl'
+        }
       }
-    }
-  })
+    })
 
-  .state('menu.showSymbol', {
-    url: '/symbol/show/{id}',
-    views: {
-      'auth': {
-        templateUrl: 'templates/show-symbol.html',
-        controller: 'showSymbolCtrl'
+    .state('menu.showSymbol', {
+      url: '/symbol/show/{id}',
+      views: {
+        'auth': {
+          templateUrl: 'templates/show-symbol.html',
+          controller: 'showSymbolCtrl'
+        }
       }
-    }
-  })
+    })
 
-$urlRouterProvider.otherwise('/login')
-
+  $urlRouterProvider.otherwise('/login')
 })

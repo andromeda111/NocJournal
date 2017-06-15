@@ -37,18 +37,15 @@ angular.module('app.allDreams', [])
       $scope.deleteDream = function (dream) {
         const id = dream.id
         const username = dream['user_username']
+
         $http.delete(apiUrl + `/${username}/${id}`).then(() => {
           getUserDreams()
         })
-
-        // $state.go('menu.allDreams')
       }
 
       $scope.editDream = function (dream) {
         const id = dream.id
         const username = dream['user_username']
-        console.log("Dream with ID " + `${dream.id}` + " was deleted.")
-        // $http.get(apiUrl + `/${username}` + `/${id}`)
 
         $state.go('menu.editDream', {id: id})
       }

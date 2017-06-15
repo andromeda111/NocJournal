@@ -1,19 +1,15 @@
 <ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-positive">
-
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
       </ion-nav-buttons>
-
       <ion-nav-back-button></ion-nav-back-button>
-
       <ion-nav-buttons side="right">
         <button class="button button-icon button-clear icon ion-ios-plus-empty" ui-sref="menu.newForm()">
         </button>
       </ion-nav-buttons>
     </ion-nav-bar>
-    
     <ion-nav-view name="auth"></ion-nav-view>
   </ion-side-menu-content>
   <ion-side-menu side="left" id="auth">
@@ -27,24 +23,15 @@
       <ion-list id="menu-list1">
         <ion-item class="item-icon-left side-menu-item" id="menu-list-item2" ui-sref="menu.allDreams()" menu-close="" active-page-highlight="">
           <i class="icon ion-ios-cloudy-night"></i>All Dreams</ion-item>
-        <!-- <ion-item class="item-icon-left side-menu-item" id="menu-list-item3" ui-sref="menu.calendar()" menu-close="" active-page-highlight="">
-          <i class="icon ion-calendar"></i>Calendar</ion-item> -->
         <ion-item class="item-icon-left side-menu-item" id="menu-list-item4" ui-sref="menu.symbolism()" menu-close="" active-page-highlight="">
           <i class="icon ion-ios-flower"></i>Symbolism Search</ion-item>
-        <!-- <ion-item class="item-icon-left side-menu-item" id="menu-list-item5" ui-sref="menu.lucid()" menu-close="" active-page-highlight="">
-          <i class="icon ion-ios-search"></i>Lucid Resource</ion-item> -->
-          <ion-item class="item-icon-left side-menu-item" id="menu-list-item1" ui-sref="menu.user()" menu-close="" active-page-highlight="">
-            <i class="icon ion-android-person"></i>User</ion-item>
+        <ion-item class="item-icon-left side-menu-item" id="menu-list-item1" ui-sref="menu.user()" menu-close="" active-page-highlight="">
+          <i class="icon ion-android-person"></i>User</ion-item>
         <ion-item id="menu-list-item6" ng-click="logout()" active-page-highlight="" class="item-icon-left side-menu-item"><i class="icon ion-log-out"></i>Log Out</ion-item>
       </ion-list>
       <div class="logo-img">
-        <img src="img/nocjournal-logo1.png"  id="nocjournal-logo">
+        <img src="img/nocjournal-logo1.png" id="nocjournal-logo">
       </div>
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
-
-
-
-
-<button id="menu-button6" ng-click="logout()" style="border-radius:5px 5px 5px 5px;" class="button button-positive button-block">Log Out</button>
