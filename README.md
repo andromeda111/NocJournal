@@ -1,59 +1,57 @@
-NocJournal 
+NocJournal
 =====================
 
-Having dreams are a part of every individual, and for those that are curious & inspired by their dreams have the ability to  their dreams with NocJournal. NocJournal has the ability to let users find symbols & meaning through the NocJournal app. Our features allows the user to add new dreams, find trends through our graphs & symbol documentations. Have an interest to explore your subconcious? NocJournal is one of the first steps to unlock the mystery of your dreams. 
-## NocJournal 
+Having dreams are a part of every individual, and for those that are curious & inspired by their dreams have the ability to  their dreams with NocJournal. NocJournal has the ability to let users find symbols & meaning through the NocJournal app. Our features allows the user to add new dreams, find trends through our graphs & symbol documentations. Have an interest to explore your subconcious? NocJournal is one of the first steps to unlock the mystery of your dreams.
+## NocJournal
 ![screenshot of homepage](https://user-images.githubusercontent.com/24262724/26952250-7c7a159c-4c59-11e7-8683-4d30be8e0b1a.png)
 
 
-
-
-
-
-## Features 
+## Features
 
 Record & document your new dreams. The user can rank and organize their dreams in recurrence, nightmares & lucidity.  
 
 ![screenshot of new dream](https://user-images.githubusercontent.com/24262724/26952462-6a3abfac-4c5a-11e7-99a3-9cc0d45367d5.png)
 
-Explore the symbols that you may encounter in your dreams. 
+Explore the symbols that you may encounter in your dreams.
 
-![sceren shot of symbols](https://user-images.githubusercontent.com/24262724/26952907-588a0b30-4c5c-11e7-821d-aa253698616f.png)
+![screenshot of symbols](https://user-images.githubusercontent.com/24262724/26952907-588a0b30-4c5c-11e7-821d-aa253698616f.png)
 
 
-## Graph of Dreams 
+## Graph of Dreams
 
-This graph highlights the average emotion the user has experienced throughout their dream documentation. 
+This graph highlights the average emotion the user has experienced throughout their dream documentation.
 
 ![screennshot of graph](https://user-images.githubusercontent.com/24262724/26986194-4aa33e5c-4cfb-11e7-9d15-e9234bde6318.png)
 
-## Technology we used 
-Node.js
-PostgreSQL
-ExpressJS
-Knex.js
-Handlebars
-Bootstrap
-Angular 
-Javascript
+## Technology we used
+Angular, Ionic, Javascript, Node.js, PostgreSQL, ExpressJS, Knex.js, Bootstrap
 
 
-## What to Install 
-< add to install here> 
+## Future Development
 
-## Future Development 
+- Having Calendar & archiving dreams in the menu. IE: A calendar will mark the days you had dreams.
 
-- Having Calendar & archiving dreams in the menu. IE: A calendar will mark the days you had dreams. 
+- Lucid Dreaming Resources: Have a resource to inform users how to experience lucid dreamining & how to train yourself to control the dream efficently.
 
-- Lucid Dreaming Resources: Have a resource to inform users how to experience lucid dreamining & how to train yourself to control the dream efficently. 
+- Facebook integration: Use ionic "passport" so users can log in/sign up with their facebook login.
 
-- Facebook integration: Use ionic "passport" so users can log in/sign up with their facebook login. 
+## Backend
 
-## Our Project 
+Backend repositories can be found at:
+Dream Symbolism API:
+- https://github.com/missalyss/dream_symbolism_api
+- https://dream-symbolism-api.herokuapp.com/
 
-< link to app here> 
+Nocjournal backend:
+- https://github.com/missalyss/dream_frog
+- Deployed site omitted for privacy
 
-Created By:
+## Our Project
+
+Contact creators for information on how to download the app through iOS' Testflight or on Android.
+
+
+## Created By:
 
 John Seymour: https://github.com/andromeda111
 
