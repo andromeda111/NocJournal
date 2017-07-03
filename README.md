@@ -1,57 +1,55 @@
 NocJournal
 =====================
 
-Having dreams are a part of every individual, and for those that are curious & inspired by their dreams have the ability to  their dreams with NocJournal. NocJournal has the ability to let users find symbols & meaning through the NocJournal app. Our features allows the user to add new dreams, find trends through our graphs & symbol documentations. Have an interest to explore your subconcious? NocJournal is one of the first steps to unlock the mystery of your dreams.
-## NocJournal
-![screenshot of homepage](https://user-images.githubusercontent.com/24262724/26952250-7c7a159c-4c59-11e7-8683-4d30be8e0b1a.png)
+NocJournal allows the user log dreams, search a library of dream symbolism and interpretation, and review personal dream patterns and statistics to gain insight and aid self-growth and awareness.
+
+NocJournal is a mobile app developed for iOS and Android with Ionic Framework.
 
 
 ## Features
 
-Record & document your new dreams. The user can rank and organize their dreams in recurrence, nightmares & lucidity.  
+#### Dream Journal
+Users can log their dreams, providing relevant information such as the description, personal reflections, the degree of lucidity, the overall emotion, and whether it was a nightmare or recurring dream.
 
-![screenshot of new dream](https://user-images.githubusercontent.com/24262724/26952462-6a3abfac-4c5a-11e7-99a3-9cc0d45367d5.png)
+#### Symbolism Library
+Explore meanings and interpretations of a variety of symbols that you may encounter in your dreams.
 
-Explore the symbols that you may encounter in your dreams.
+#### User Statistics
 
-![screenshot of symbols](https://user-images.githubusercontent.com/24262724/26952907-588a0b30-4c5c-11e7-821d-aa253698616f.png)
+A statistics page provides the user with information regarding trends and patterns in their dreams based on the dreams they have logged.
 
+## Installation
+The repository can be downloaded and run as a web application for development/testing:
 
-## Graph of Dreams
+1. Run npm install to download necessary dependencies.
+2. Make sure Ionic v1 is installed: http://ionicframework.com/getting-started
+3. In the terminal, use Ionic to run the application:
+```
+$ ionic serve
+```
 
-This graph highlights the average emotion the user has experienced throughout their dream documentation.
+Native mobile downloads of the app are currently only available with beta test versions (iOS/Android) in the Apple iOS store and the Google Play store.
 
-![screennshot of graph](https://user-images.githubusercontent.com/24262724/26986194-4aa33e5c-4cfb-11e7-9d15-e9234bde6318.png)
+## Technology
+AngularJS, Ionic v1, JavaScript, Node.js, PostgreSQL, ExpressJS, Knex.js, SASS, Bootstrap
 
-## Technology we used
-Angular, Ionic, Javascript, Node.js, PostgreSQL, ExpressJS, Knex.js, Bootstrap
-
-
-## Future Development
-
-- Having Calendar & archiving dreams in the menu. IE: A calendar will mark the days you had dreams.
-
-- Lucid Dreaming Resources: Have a resource to inform users how to experience lucid dreamining & how to train yourself to control the dream efficently.
-
-- Facebook integration: Use ionic "passport" so users can log in/sign up with their facebook login.
-
-## Backend
+## API Backend
 
 Backend repositories can be found at:
 Dream Symbolism API:
 - https://github.com/missalyss/dream_symbolism_api
 - https://dream-symbolism-api.herokuapp.com/
 
-Nocjournal backend:
+NocJournal backend:
 - https://github.com/missalyss/dream_frog
 - Deployed site omitted for privacy
 
 ## Our Project
 
-Contact creators for information on how to download the app through iOS' Testflight or on Android.
+Contact developers for information on how to download the app through iOS' Testflight or on Android through the Google Play store.
 
 
-## Created By:
+## Developed By:
 
 John Seymour: https://github.com/andromeda111
 
