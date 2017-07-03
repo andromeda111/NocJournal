@@ -3,7 +3,7 @@ NocJournal
 
 NocJournal allows the user log dreams, search a library of dream symbolism and interpretation, and review personal dream patterns and statistics to gain insight and aid self-growth and awareness.
 
-NocJournal is a mobile app developed for iOS and Android with Ionic Framework.
+NocJournal is a mobile app developed for iOS and Android with Ionic Framework. | June 2017
 
 
 ## Features
@@ -54,7 +54,7 @@ NocJournal backend:
 Contact developers for information on how to download the app through iOS' Testflight or on Android through the Google Play store.
 
 
-## Developed By:
+## Developed By | June 2017:
 
 John Seymour: https://github.com/andromeda111
 
