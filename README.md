@@ -7,11 +7,12 @@ NocJournal is a mobile app developed for iOS and Android with Ionic Framework.
 
 
 ## Features
-<img src="docs/nocjournal-login.png" style="width: 250px; margin: 10px 5px"> | <img src="docs/nocjournal-menu.png" style="width: 250px; margin: 10px 5px">
+<img src="docs/nocjournal-login.png" style="width: 200px; margin: 10px 5px"> | <img src="docs/nocjournal-menu.png" style="width: 200px; margin: 10px 5px">
 
 #### Dream Journal
 Users can log their dreams, providing relevant information such as the description, personal reflections, the degree of lucidity, the overall emotion, and whether it was a nightmare or recurring dream.
-<img src="docs/nocjournal-list.png" style="width: 250px; margin: 10px 5px"> | <img src="docs/nocjournal-add.png" style="width: 250px; margin: 10px 5px">
+
+<img src="docs/nocjournal-list.png" style="width: 200px; margin: 10px 5px"> | <img src="docs/nocjournal-add.png" style="width: 200px; margin: 10px 5px">
 
 #### Symbolism Library
 Explore meanings and interpretations of a variety of symbols that you may encounter in your dreams.
@@ -19,7 +20,8 @@ Explore meanings and interpretations of a variety of symbols that you may encoun
 #### User Statistics
 
 A statistics page provides the user with information regarding trends and patterns in their dreams based on the dreams they have logged.
-<img src="docs/nocjournal-stats.png" style="width: 250px; margin: 10px 5px">
+
+<img src="docs/nocjournal-stats.png" style="width: 200px; margin: 10px 5px">
 
 ## Installation
 The repository can be downloaded and run as a web application for development/testing:
